@@ -1,0 +1,160 @@
+{
+  "StSpp:PlaceholderRelic": {
+    "NAME": "Placeholder Energy Relic",
+    "FLAVOR": "The snake is a friend.",
+    "DESCRIPTIONS": [
+      "Gain #b1 [E] ."
+    ]
+  },
+  "StSpp:PlaceholderRelic2": {
+    "NAME": "Placeholder Relic 2",
+    "FLAVOR": "You feel stronger.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b1 #yStrength."
+    ]
+  },
+  "StSpp:DefaultClickableRelic": {
+    "NAME": "Right-Clicky Relic",
+    "FLAVOR": "The more you right-click it, the more orbs you've evoked in your lifetime.",
+    "DESCRIPTIONS": [
+      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]turn.[] NL #yEvoke your rightmost Orb.",
+      "YOU ARE MINE!"
+    ]
+  },
+  "StSpp:BottledPlaceholderRelic": {
+    "NAME": "Bottled Placeholder",
+    "FLAVOR": "What is this?",
+    "DESCRIPTIONS": [
+      "Choose a card. Whenever you take play any card, draw the chosen card.",
+      "Whenever you play a card, draw ",
+      ".",
+      "Select a card to bottle for "
+    ]
+  },
+  "StSpp:XCola" :
+  {
+    "NAME" : "Coffee",
+    "FLAVOR" : "It's warm.",
+    "DESCRIPTIONS" : [ "X cards no longer consume energy."]
+  },
+  "StSpp:BoiledEgg":
+  {
+    "NAME" :"Cosmic Egg",
+    "FLAVOR" : "A whole universe in your hand",
+    "DESCRIPTIONS" : [ "When you draw a card you have #b10% #bof #bchance this card is upgraded for the rest of the fight." ]
+  },
+  "StSpp:BrokenTotem":
+  {
+    "NAME": "Broken Totem",
+    "FLAVOR" : "Even if the totem is broken some power seems to emanate",
+    "DESCRIPTIONS" : ["Curse and status effects are also applied to a random enemy."]
+  },
+  "StSpp:SailingBoat" :
+  {
+    "NAME" : "Sailing boat",
+    "FLAVOR" : "It's way heavier than you think",
+    "DESCRIPTIONS" : [" At the begin of the #b4th #bturn, gain #b2 #bStrength "]
+  },
+  "StSpp:SailorCap" :
+  {
+    "NAME" : "Sailor Cap",
+    "FLAVOR" : "It's too small for your head",
+    "DESCRIPTIONS" : [ "At the begin of the #b5th #bturn, draw cards until your hand is full."]
+  },
+  "StSpp:TwinEgg" :
+  {
+    "NAME" : "Twin Egg",
+    "FLAVOR" : "Not even born yet and already binded",
+    "DESCRIPTIONS" : [ "Whenever you play the same card twice, upgrade it until the end of the fight."]
+  },
+  "StSpp:PetrifiedCaterpillar" :
+  {
+    "NAME" : "Glass Pickaxe",
+    "FLAVOR" : "It looks like it can break at any moment",
+    "DESCRIPTIONS" : ["Gain ", "#bgolds if you finish a fight #bwithout #blosing #bHP."]
+  },
+  "StSpp:JackpotMachine" :
+  {
+    "NAME" : "Light Bulb",
+    "FLAVOR" : "Don't stop !",
+    "DESCRIPTIONS" : ["For every ", " Card drawn gain [E] ." ]
+  },
+  "StSpp:ChessPiece":
+  {
+    "NAME" : "Chess piece",
+    "FLAVOR" : "How many games this piece have seen ?",
+    "DESCRIPTIONS" : ["the first card you play which contain 'At the next turn' #bcost #b1 #bless and its effect trigger #binstantly."]
+  },
+  "StSpp:PileOfSugar" :
+  {
+    "NAME" : "Pile of sugar",
+    "FLAVOR" : "It sparkle",
+    "DESCRIPTIONS" : ["At the start of your turn gain [E] [E] , you lose 30 HP for each unspent [E] at the end of the turn."]
+  },
+  "StSpp:GiftCard" :
+  {
+    "NAME" : "Gift card",
+    "FLAVOR" : "(Almost) Everything is free !",
+    "DESCRIPTIONS" : ["Common cards and potions are free."]
+  },
+  "StSpp:BackupBattery":
+  {
+    "NAME" : "Backup Battery",
+    "FLAVOR" : "Powered on only in the worst situations",
+    "DESCRIPTIONS" : ["If you start a turn without channeled orbs , channel two random orbs."]
+  },
+  "StSpp:SpiranhaBones" :
+  {
+    "NAME" : "Spirahna Bones",
+    "FLAVOR" : "Even if this fish died a long times ago , it seems to be still hungry",
+    "DESCRIPTIONS" : ["Whenever you play cards that cost HP, consume block first."]
+  },
+  "StSpp:CrystalBall" :
+  {
+    "NAME" : "Crystal Ball",
+    "FLAVOR" : "If you look through this ball you can see all your past and all your potential futures ",
+    "DESCRIPTIONS" : ["Upon picking, add to your deck all rare cards."]
+  },
+  "StSpp:WoodenPendulum":
+  {
+    "NAME" : "Wooden Pendulum",
+    "FLAVOR" : "this perfectly regular and mechanical sound become more and more unbearable",
+    "DESCRIPTIONS" : ["If you end a fight in ", " #bturns or less you have #b2 #bmore #bchoices for card rewards."]
+  },
+  "StSpp:WoodenStick":
+  {
+    "NAME" : "Bow",
+    "FLAVOR" : "A basic weapon , but can become a deadly weapon if well used",
+    "DESCRIPTIONS" : ["Whenever you play a basic strike or a basic defend ,gain +1 damage / block for the fight."]
+  },
+  "StSpp:FireArrow" :
+  {
+    "NAME" : "Torch",
+    "FLAVOR" : "It's too hot to keep it in a hand more than a few seconds",
+    "DESCRIPTIONS" : ["All your cards in hands are exhausted at the end of the turn."]
+  },
+  "StSpp:Balance" :
+  {
+    "NAME" : "Balance",
+    "FLAVOR" : "As all things should be",
+    "DESCRIPTIONS" : ["Each time you draw a card. Your cheapest card cost 1 more and your most expensive card cost 1 less."]
+  },
+  "StSpp:Magatama" :
+  {
+    "NAME" : "Magatama",
+    "FLAVOR" : "It slightly glow",
+    "DESCRIPTIONS" : ["At the start of your turn gain [E] , ennemies start with 2 Intangible."]
+  },
+  "StSpp:Dice" :
+  {
+    "NAME" : "Dice",
+    "FLAVOR" : "As excepted",
+    "DESCRIPTIONS" : ["Morph to a random relic at the begin of each fight."]
+  },
+  "StSpp:Monolith" :
+  {
+    "NAME" : "Monolith",
+    "FLAVOR" : "It's perfectly flat",
+    "DESCRIPTIONS" : ["At the start a of the turn , draw a card as long as you don't play a Power card."]
+  }
+}

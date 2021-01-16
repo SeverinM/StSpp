@@ -1,0 +1,26 @@
+{
+"StSpp:PlaceholderPotion": {
+        "NAME": "Placeholder Potion",
+        "DESCRIPTIONS": ["Gain ", " At the end of your turn, lose ", " Strength."]
+},
+"StSpp:SecondWindPotion" :
+{
+        "NAME" : "Potion de second souffle",
+        "DESCRIPTIONS" : ["Retire tout vos debuffs"]
+},
+"StSpp:ScatteredPotion" :
+{
+      "NAME" : "Potion de feu fragmenté",
+        "DESCRIPTIONS" : ["Inflige ", " Degats."," Utilisables ", " fois"]
+},
+  "StSpp:ScatteredWeakPotion" :
+  {
+    "NAME" : "Potion de faiblesse fragmenté",
+    "DESCRIPTIONS" : ["Appliquez ", " de Faiblesse."," Utilisable ", " fois"]
+  },
+  "StSpp:InhibitionPotion" :
+  {
+    "NAME" : "Potion inhibitrice",
+    "DESCRIPTIONS" : ["Enleve tous les buffs ennemies pour ", " tours"]
+  }
+}

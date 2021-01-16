@@ -1,0 +1,160 @@
+{
+  "StSpp:PlaceholderRelic": {
+    "NAME": "Placeholder Energy Relic",
+    "FLAVOR": "The snake is a friend.",
+    "DESCRIPTIONS": [
+      "Gain #b1 [E] ."
+    ]
+  },
+  "StSpp:PlaceholderRelic2": {
+    "NAME": "Placeholder Relic 2",
+    "FLAVOR": "You feel stronger.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b1 #yStrength."
+    ]
+  },
+  "StSpp:DefaultClickableRelic": {
+    "NAME": "Right-Clicky Relic",
+    "FLAVOR": "The more you right-click it, the more orbs you've evoked in your lifetime.",
+    "DESCRIPTIONS": [
+      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]turn.[] NL #yEvoke your rightmost Orb.",
+      "YOU ARE MINE!"
+    ]
+  },
+  "StSpp:BottledPlaceholderRelic": {
+    "NAME": "Bottled Placeholder",
+    "FLAVOR": "What is this?",
+    "DESCRIPTIONS": [
+      "Choose a card. Whenever you take play any card, draw the chosen card.",
+      "Whenever you play a card, draw ",
+      ".",
+      "Select a card to bottle for "
+    ]
+  },
+  "StSpp:XCola" :
+  {
+    "NAME" : "XCola",
+    "FLAVOR" : "Il est tiède.",
+    "DESCRIPTIONS" : [ "Les cartes X ne consomment plus d'energies"]
+  },
+  "StSpp:BoiledEgg":
+  {
+    "NAME" :"Oeuf cosmique",
+    "FLAVOR" : "Tout un univers dans votre main",
+    "DESCRIPTIONS" : [ "Quand vous piochez une carte vous avez #b10% #bde #bchance de l'ameliorer pour le reste du combat." ]
+  },
+  "StSpp:BrokenTotem":
+  {
+    "NAME": "Totem brisé",
+    "FLAVOR" : "Même brisé , ce totem semble degager un certain pouvoir",
+    "DESCRIPTIONS" : ["Les effets de maledictions et de status sont aussi appliqué à un ennemi aléatoire"]
+  },
+  "StSpp:SailingBoat" :
+  {
+    "NAME" : "Voile de bateau",
+    "FLAVOR" : "C'est bien plus lourd qu'il n'y parait",
+    "DESCRIPTIONS" : ["Au début du #b4ème #btour, gagnez #b2 #bForce"]
+  },
+  "StSpp:SailorCap" :
+  {
+    "NAME" : "Le chapeau du capitaine",
+    "FLAVOR" : "Bien trop petit pour votre tête",
+    "DESCRIPTIONS" : [ "Au début du #b5ème #btour, piochez des cartes jusqu'a ce que votre main soit pleine"]
+  },
+  "StSpp:TwinEgg" :
+  {
+    "NAME" : "Oeuf jumeaux",
+    "FLAVOR" : "Même pas encore né et déjà lié",
+    "DESCRIPTIONS" : [ "Quand vous jouez la même carte deux fois, ameliorez là jusqu'a la fin du combat"]
+  },
+  "StSpp:PetrifiedCaterpillar" :
+  {
+    "NAME" : "Pioche en verre",
+    "FLAVOR" : "Peut se briser à n'importe quel moment",
+    "DESCRIPTIONS" : ["Gagnez ", "#bOr si vous finissez un combat #bsans #bperdre #bde #bPV"]
+  },
+  "StSpp:JackpotMachine" :
+  {
+    "NAME" : "Ampoule",
+    "FLAVOR" : "Ne t'arrete pas !",
+    "DESCRIPTIONS" : ["Tous les ", " cartes piochées gagnez [E]" ]
+  },
+  "StSpp:ChessPiece":
+  {
+    "NAME" : "Pièce d'échec",
+    "FLAVOR" : "Combien de parties cette pièce a vu ?",
+    "DESCRIPTIONS" : ["La premiere carte 'Au prochain tour' #bcoute #b1 #de #bmoins et declenche son effet #btout #bde #bsuite."]
+  },
+  "StSpp:PileOfSugar" :
+  {
+    "NAME" : "Pile de sucre",
+    "FLAVOR" : "Ca brille",
+    "DESCRIPTIONS" : ["Au debut de votre tour gagnez [E] [E] . A la fin du tour perdez 30 PV par [E] non depensé."]
+  },
+  "StSpp:GiftCard" :
+  {
+    "NAME" : "Carte cadeau",
+    "FLAVOR" : "(Presque) tout est gratuit !",
+    "DESCRIPTIONS" : ["Les cartes et potions communes sont gratuites."]
+  },
+  "StSpp:BackupBattery":
+  {
+    "NAME" : "Batterie de secours",
+    "FLAVOR" : "Utilisé que dans les pires situations",
+    "DESCRIPTIONS" : ["Si commencez un tour sans orbes cannalisé, cannalisez deux orbes aléatoires."]
+  },
+  "StSpp:SpiranhaBones" :
+  {
+    "NAME" : "Os de pyrahna",
+    "FLAVOR" : "Même s'il est mort depuis longtemps , il semble toujours affamé",
+    "DESCRIPTIONS" : ["Les cartes coutant des PV utilisent de l'Armure en priorité."]
+  },
+  "StSpp:CrystalBall" :
+  {
+    "NAME" : "Boule de cristal",
+    "FLAVOR" : "On peut voir tous les futurs potentiels à travers cette boule",
+    "DESCRIPTIONS" : ["A l'obtention obtenez ajoutez toutes les cartes rares dans votre deck."]
+  },
+  "StSpp:WoodenPendulum":
+  {
+    "NAME" : "Pendule en bois",
+    "FLAVOR" : "Ce son parfaitement regulier et mecanique devient de plus en plus insupportable",
+    "DESCRIPTIONS" : ["Si vous finissez un combat en ", " #btours ou moins vous avez #b2 #bchoix #bsupplementaires de cartes."]
+  },
+  "StSpp:WoodenStick":
+  {
+    "NAME" : "Arc",
+    "FLAVOR" : "Une arme basique mais qui peut devenir une arme mortelle si bien utilisé.",
+    "DESCRIPTIONS" : ["Quand vous jouez une frappe ou une protection basique , lui confere +1 dégats / Armure pour le reste du combat."]
+  },
+  "StSpp:FireArrow" :
+  {
+    "NAME" : "Torche",
+    "FLAVOR" : "Beaucoup trop chaud pour être gardé en main plus de quelques secondes.",
+    "DESCRIPTIONS" : ["A la fin de votre tour epuisez toutes vos cartes en main."]
+  },
+  "StSpp:Balance" :
+  {
+    "NAME" : "Balance",
+    "FLAVOR" : "Comme toute chose devrait l'être.",
+    "DESCRIPTIONS" : ["Quand vous piochez une carte. Votre carte la moins cher coute 1 de plus et votre carte la plus cher coute 1 de moins."]
+  },
+  "StSpp:Magatama" :
+  {
+    "NAME" : "Magatama",
+    "FLAVOR" : "Il brille légèrement.",
+    "DESCRIPTIONS" : ["Au debut de votre tour gagnez [E] , les ennemies commencent avec 2 Intangible."]
+  },
+  "StSpp:Dice" :
+  {
+    "NAME" : "Dés",
+    "FLAVOR" : "Comme prevu",
+    "DESCRIPTIONS" : ["Se change en une relique aleatoire à chaque combat."]
+  },
+  "StSpp:Monolith" :
+  {
+    "NAME" : "Monolithe",
+    "FLAVOR" : "Il est parfaitement plat",
+    "DESCRIPTIONS" : ["Au debut du tour, piochez une carte tant que vous n'avez pas joué de carte Pouvoir."]
+  }
+}

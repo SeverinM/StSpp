@@ -1,0 +1,80 @@
+{
+"StSpp:CommonPower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+},
+"StSpp:RarePower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"StSpp:InLoop" :
+{
+        "NAME" : "In a time loop",
+        "DESCRIPTIONS" : ["At the next turn ,add " , " cards 'next turn' in your hand."]
+},
+"StSpp:MuscleMemoryPower":
+{
+        "NAME" : "Force of habit",
+        "DESCRIPTIONS" : ["At the end of turn, add a copy of a random non-basic card you played this turn , ", " times."]
+},
+"StSpp:InhibitedPower":
+{
+        "NAME" : "Inhibited power",
+        "DESCRIPTIONS" : ["All these buffs are disabled for ", " turns :"]
+},
+"StSpp:DamnationPower":
+{
+        "NAME" : "Damned",
+        "DESCRIPTIONS" : ["When you exhaust a card from another card, play the first one ", " times." ]
+},
+"StSpp:BetrayalPower":
+{
+        "NAME" : "Betray",
+        "DESCRIPTIONS" : ["The next ", " times you lose HP from red card , heal you instead." ]
+},
+"StSpp:AbandonFleshPower":
+{
+        "NAME" : "Abandon flesh",
+        "DESCRIPTIONS" : ["Gain ", " intangible next turn."]
+},
+"StSpp:SpareBladePower":
+{
+        "NAME" : "Spare blade",
+        "DESCRIPTIONS" : [ "Whenever you discard a shiv , add ", " shiv to your hand." ]
+},
+"StSpp:SneakPower":
+{
+       "NAME" : "Sneak power",
+        "DESCRIPTIONS" : ["Whenever you play a card that is not a Skill, lose ", " Block"]
+},
+"StSpp:IgniterPower":
+{
+        "NAME" : "Igniter power",
+        "DESCRIPTIONS" : ["Whenever you channel an orb, trigger its passive  ", " times."]
+},
+"StSpp:TemporaryFocus":
+{
+        "NAME" : "Temporary power",
+        "DESCRIPTIONS" : ["Gain " , " Focus but lose them at the end of the turn."]
+},
+"StSpp:MemoryLeakPower":
+{
+        "NAME" : "Memory leak",
+        "DESCRIPTIONS" : ["Your power cards cost ", " less. These powers will disappear at the next turn : "]
+},
+"StSpp:PurifyPower":
+{
+        "NAME" : "Purify",
+        "DESCRIPTIONS" : ["Whenever you enter in divinity stance exhaust up to "," Curses and Status cards."]
+},
+"StSpp:FaithPower":
+{
+        "NAME" : "Faith",
+        "DESCRIPTIONS" : ["3 Mantra count as ", " Strength."]
+},
+"StSpp:VitalPointPower" :
+{
+        "NAME" : "Vital spot",
+        "DESCRIPTIONS" : ["Double the potency of your ", " next debuffs / buffs this turn."]
+}
+}

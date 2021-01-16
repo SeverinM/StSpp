@@ -1,0 +1,302 @@
+{
+  "StSpp:MinorTwinStrike" :
+  {
+    "NAME" : "Double frappe mineur",
+    "DESCRIPTION" : "Infligez !D! dégâts deux fois. NL Piochez une carte."
+  },
+  "StSpp:BladeOfBlood" :
+  {
+    "NAME" : "Lame de sang",
+    "DESCRIPTION" : "Perdez la moitié de vos PV. NL Infligez autant de dégâts que vos PV manquant. NL Épuisement."
+  },
+  "StSpp:CounterStrike" :
+  {
+    "NAME" : "Armure lourde",
+    "DESCRIPTION" : "Perdez 1 de force. NL Gagnez !B! d'Armure."
+  },
+  "StSpp:Panic" :
+  {
+    "NAME" : "Panique",
+    "DESCRIPTION" : "Coûte 1 de moins pour chaque debuff unique que vous avez. NL Gagnez [E] et piochez !M! cartes."
+  },
+  "StSpp:Unbreakable" :
+  {
+    "NAME" : "Incassable",
+    "DESCRIPTION" : "Gagnez !B! d'armures. NL Gagnez le double si vous êtes fragile.",
+    "UPGRADE_DESCRIPTION" : "Gagnez !B! d'armures. NL Gagnez le triple si vous êtes fragile."
+  },
+  "StSpp:Resilience" :
+  {
+    "NAME" : "Obstination",
+    "DESCRIPTION" : "Infligez !D! dégâts. NL Doublez les dégâts si vous êtes affaibli.",
+    "UPGRADE_DESCRIPTION" : "Infligez !D! dégâts. NL Triplez les dégâts si vous êtes affaibli."
+  },
+  "StSpp:TimeParadox" :
+  {
+    "NAME" : "Paradoxe temporel",
+    "DESCRIPTION" : "Au prochain tour, ajoutez !M! cartes 'au prochain tour' dans votre main."
+  },
+  "StSpp:Berserk" :
+  {
+    "NAME" : "Fury",
+    "DESCRIPTION" : "Can only be played if your HP is an even number , gain [E].",
+    "UPGRADE_DESCRIPTION" : "Can only be played if your HP is an even number , gain [E] [E]."
+  },
+  "StSpp:Sprint" :
+  {
+    "NAME" : "Sprint",
+    "DESCRIPTION" : "Gagnez [E]. NL Vous ne pouvez plus attaquer jusqu'a la fin du tour.",
+    "UPGRADE_DESCRIPTION" : "Gagnez [E] [E]. NL Vous ne pouvez plus attaquer jusqu'a la fin du tour."
+  },
+  "StSpp:Saturation" :
+  {
+    "NAME" : "Saturation",
+    "DESCRIPTION" : "Jouable que si vous n'avez aucun emplacement vide, gagnez !M! concentration. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Certains emplacements sont vides"
+    ]
+  },
+  "StSpp:TargetLocked" :
+  {
+    "NAME" : "Cible verrouillé",
+    "DESCRIPTION" : "Appliquez 99 de Ciblage. NL Épuisement."
+  },
+  "StSpp:MuscleMemory" :
+  {
+    "NAME" : "Memoire musculaire",
+    "DESCRIPTION" : "A la fin de votre tour copiez une carte non-basique dans votre pioche joué durant ce tour."
+  },
+  "StSpp:Dive" :
+  {
+    "NAME" : "Plongeon",
+    "DESCRIPTION" : "Piochez autant de cartes que vous avez de [E] ."
+  },
+  "StSpp:Jab" :
+  {
+    "NAME" : "Coup bien placé",
+    "DESCRIPTION" : "Infligez !D! dégâts. NL Pour chaque !M! dégâts infligés gagnez [E] et piochez une carte. NL Épuisement."
+  },
+  "StSpp:CorrosivePoison" :
+  {
+    "NAME" : "Stimulant",
+    "DESCRIPTION" : "Gagnez [E] , appliquez vous 3 Poison.",
+    "UPGRADE_DESCRIPTION" : "Gagnez [E] [E] , appliquez vous 3 Poison."
+  },
+  "StSpp:IntoTheAbyss" :
+  {
+    "NAME" : "Vers les abysses",
+    "DESCRIPTION" : "Epuisez votre pioche. NL Épuisement"
+  },
+  "StSpp:Vengeance":
+  {
+    "NAME" : "Vengeance",
+    "DESCRIPTION" : "Jouable que si vos autres cartes sont des maledictions ou status. NL Ajoutez un gourdin qui coute 0.",
+    "UPGRADE_DESCRIPTION" : "Jouable que si vos autres cartes sont des maledictions ou status. NL Ajoutez un gourdin+ qui coute 0."
+  },
+  "StSpp:Damnation":
+  {
+    "NAME" : "Damnation",
+    "DESCRIPTION" : "Whenever you exhaust a card from another card, play it."
+  },
+  "StSpp:Lure" :
+  {
+    "NAME" : "Leurre",
+    "DESCRIPTION" : "Injouable après le tour 5 ( !M! ). NL Piochez une carte. NL Gagnez !B! d'Armure."
+  },
+  "StSpp:Throw" :
+  {
+    "NAME" : "Jeter",
+    "DESCRIPTION" : "Piochez !M! cartes. NL Defaussez les."
+  },
+  "StSpp:Betrayal":
+  {
+    "NAME" : "Trahison",
+    "DESCRIPTION" : "Les X prochaines fois que vous perdez des PV via des cartes vous soigne à la place.",
+    "UPGRADE_DESCRIPTION" : "Les X+1 prochaines fois que vous perdez des PV via des cartes vous soigne à la place."
+  },
+  "StSpp:FiercePoison":
+  {
+    "NAME" : "Poison virulent",
+    "DESCRIPTION" : "Appliquez !M! de Poison. NL Doublez l'effet quand cette carte est defaussée ou jouée."
+  },
+  "StSpp:ChainedTrap":
+  {
+    "NAME" : "Piège en serie",
+    "DESCRIPTION" : "Appliquez !M! debuffs aleatoire pour chaque [E] que vous avez."
+  },
+  "StSpp:KnowledgeIsPower" :
+  {
+    "NAME" : "Savoir c'est prevoir",
+    "DESCRIPTION" : "Infligez autant de dégâts que l'étage actuel ( !D! , reinitialisé à chaque acte )."
+  },
+  "StSpp:MakeshiftWeapon" :
+  {
+    "NAME" : "Arme de fortune",
+    "DESCRIPTION" : "Infligez !D! dégâts à TOUS les ennemis. NL Perdez une relique aléatoire. NL Épuisement.",
+    "UPGRADE_DESCRIPTION" : "Infligez !D! dégâts à TOUS les ennemis. NL Perdez votre derniere relique. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Je n'ai pas de relique"
+    ]
+  },
+  "StSpp:Succumb" :
+  {
+    "NAME" : "Succomber",
+    "DESCRIPTION" : "Piochez !M! cartes ( Malédictions et Status en priorité )."
+  },
+  "StSpp:SwitchWeapon" :
+  {
+    "NAME" : "Changement d'arme",
+    "DESCRIPTION" : "Gagnez une arme-relique jusqu'a la fin du combat."
+  },
+  "StSpp:StrikeFirst" :
+  {
+    "NAME" : "Frapper le premier",
+    "DESCRIPTION" : "Infligez !D! dégâts. NL Si l'ennemi n'a pas l'intention d'attaquer piochez une carte.",
+    "UPGRADE_DESCRIPTION" : "Infligez !D! dégâts. NL Si l'ennemi n'a pas l'intention d'attaquer piochez !M! cartes."
+  },
+  "StSpp:HumanShield":
+  {
+    "NAME" : "Bouclier humain",
+    "DESCRIPTION" : "Gagnez autant d'Armure que TOUS les ennemies reunis",
+    "UPGRADE_DESCRIPTION" : "Gagnez le double d'Armure de TOUS les ennemies reunis",
+    "EXTENDED_DESCRIPTION":
+    [
+      "Cet ennemi n'a pas d'Armure"
+    ]
+  },
+  "StSpp:PoisonousPunch":
+  {
+    "NAME" : "Coup de poing empoisonné",
+    "DESCRIPTION" : "Infligez !D! dégâts. NL s'il s'agit de votre carte la plus a droite de votre main appliquez !D! Poison."
+  },
+  "StSpp:NonchalentStrike":
+  {
+    "NAME" : "Frappe stoïque",
+    "DESCRIPTION" : "Infligez !D! dégâts ( non affecté par les modificateurs )."
+  },
+  "StSpp:Anticipation" :
+  {
+    "NAME" : "Anticipation",
+    "DESCRIPTION" : "Declenche les effets 'prochain tour'.",
+    "UPGRADE_DESCRIPTION" : "Declenche les effets 'prochain tour'. NL Piochez une carte."
+  },
+  "StSpp:Cataclysm" :
+  {
+    "NAME" : "Cataclysme",
+    "DESCRIPTION" : "Infligez !D! dégâts. NL Gagnez !B! d'Armure. NL Piochez 5 cartes. NL Gagnez [E] [E] [E] [E] [E]. NL Épuisement",
+    "UPGRADE_DESCRIPTION" : "Infligez !D! dégâts. NL Gagnez !B! d'Armure. NL Piochez 5 cartes. NL Gagnez [E] [E] [E] [E] [E]."
+  },
+  "StSpp:Mask" :
+  {
+    "NAME" : "Masque",
+    "DESCRIPTION" : "Infligez !D! dégats à TOUS les ennemis SAUF la cible."
+  },
+  "StSpp:Fierceness":
+  {
+    "NAME" : "Acharnement",
+    "DESCRIPTION" : "Infligez !D! dégats X fois. NL Chaque attaque successive augmente les dégats de !M! ."
+  },
+  "StSpp:Turnabout":
+  {
+    "NAME" : "Volte-face",
+    "DESCRIPTION" : "Fixez vos PV à !M!."
+  },
+  "StSpp:AbandonFlesh":
+  {
+    "NAME" : "Abandonner la chair",
+    "DESCRIPTION" : "Gagnez 1 Intangible au prochain tour. NL Epuisement."
+  },
+  "StSpp:MindBarrier":
+  {
+    "NAME" : "Barrière psychique",
+    "DESCRIPTION" : "Gagnez autant d'Armure que de cartes avec des noms differents joué durant ce combat ( !M! ).",
+    "UPGRADE_DESCRIPTION" : "Gagnez autant d'Armure que de cartes avec des noms differents joué durant ce combat + 3 ( !M! )."
+  },
+  "StSpp:SpareBlade":
+  {
+    "NAME" : "Lame de secours",
+    "DESCRIPTION" : "Quand vous defaussez un Surin , ajoutez un Surin dans votre main."
+  },
+  "StSpp:Pointer":
+  {
+    "NAME" : "Redirection",
+    "DESCRIPTION" : "Joue une carte aleatoire de votre main."
+  },
+  "StSpp:CopyPaste":
+  {
+    "NAME" : "Copier-Coller",
+    "DESCRIPTION" : "Remplissez tous vos emplacements libres avec votre orbe la plus à gauche."
+  },
+  "StSpp:TheBiggerTheyAre":
+  {
+    "NAME" : "Plus ils sont grands...",
+    "DESCRIPTION" : "Infligez !D! dégats. NL Infligez les même dégâts si la cible a plus de PV que vous."
+  },
+  "StSpp:Landslide":
+  {
+    "NAME" : "Eboulement",
+    "DESCRIPTION" : "TOUS les ennemies perdent !M! PV mais gagnent !M! d'Armure et Barricade."
+  },
+  "StSpp:Igniter" :
+  {
+    "NAME" : "Canalisateur",
+    "DESCRIPTION" : "Quand vous canalisez une orbe , declenchez son passif."
+  },
+  "StSpp:Channeliser" :
+  {
+    "NAME" : "Allumage",
+    "DESCRIPTION" : "Injouable. NL Gagnez !M! de Concentration temporaire quand vous piochez cette carte."
+  },
+  "StSpp:Converter" :
+  {
+    "NAME" : "Convertisseur",
+    "DESCRIPTION" : "Declenchez toutes vos orbes pour augmenter les dégats de cette carte de !M! (selon les orbes). NL Infligez !D! dégats.",
+    "UPGRADE_DESCRIPTION" : "Declenchez toutes vos orbes pour augmenter les dégats de cette carte de !M! (selon les orbes x 2). NL Infligez !D! dégats."
+  },
+  "StSpp:TimeDodge" :
+  {
+    "NAME" : "Esquive timé",
+    "DESCRIPTION" : "Jouable que durant les tours pairs. NL Gagnez !M! d'Armure. NL Retenue."
+  },
+  "StSpp:Chanting" :
+  {
+    "NAME" : "Psalmodier",
+    "DESCRIPTION" : "Infligez autant de dégats que de cartes piochées durant ce tour ( !D! )."
+  },
+  "StSpp:Renounce" :
+  {
+    "NAME" : "Renoncer",
+    "DESCRIPTION" : "Perdez tout votre Mantra. NL Gagnez !M! fois ce montant en Armure."
+  },
+  "StSpp:LatentStrike" :
+  {
+    "NAME" : "Frappe latente",
+    "DESCRIPTION" : "Infligez !D! dégats. NL Appliquez les dégats non bloqués en Marque."
+  },
+  "StSpp:MemoryLeak":
+  {
+    "NAME" : "Fuite memoire",
+    "DESCRIPTION" : "Vos pouvoirs coutent 2 de moins mais leurs effets s'estompent au prochain tour."
+  },
+  "StSpp:Purify":
+  {
+    "NAME" : "Purification",
+    "DESCRIPTION" : "Quand vous entrez en divinité , epuisez jusqu'a !M! cartes Status ou Malédictions."
+  },
+  "StSpp:Faith":
+  {
+    "NAME" : "Foi",
+    "DESCRIPTION" : "Gagnez 3 Mantra. NL 3 Mantra comptent comme 1 de Force."
+  },
+  "StSpp:VitalPoint":
+  {
+    "NAME" : "Exaltation",
+    "DESCRIPTION" : "Le prochain debuff / buff appliqué ce tour sera deux fois plus efficace."
+  },
+  "StSpp:Patience" :
+  {
+    "NAME" : "Patience",
+    "DESCRIPTION" : "Injouable avant le tour 5 ( !M! ). NL Gagnez [E] et piochez une carte.",
+    "UPGRADE_DESCRIPTION" : "Injouable avant le tour 5 ( !M! ). NL Gagnez [E] et piochez 2 cartes."
+  }
+}

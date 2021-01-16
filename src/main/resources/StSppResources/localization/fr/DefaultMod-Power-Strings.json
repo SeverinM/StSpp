@@ -1,0 +1,75 @@
+{
+"StSpp:CommonPower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+},
+"StSpp:RarePower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"StSpp:InLoop" :
+{
+        "NAME" : "Boucle temportel",
+        "DESCRIPTIONS" : ["Au prochain tour ajoutez " , " cartes 'prochain tour' dans votre main"]
+},
+"StSpp:MuscleMemoryPower":
+{
+        "NAME" : "Force of habit",
+        "DESCRIPTIONS" : ["A la fin du tour ajoutez une carte aleatoire non-basique joué durant ce tour ", " fois"]
+},
+"StSpp:InhibitedPower":
+{
+        "NAME" : "Puissance inhibé",
+        "DESCRIPTIONS" : ["Tous les buffs sont desactivés pour ", " tours :"]
+},
+"StSpp:DamnationPower":
+{
+        "NAME" : "Damned",
+        "DESCRIPTIONS" : ["When you exhaust a card from another card, play the first one ", " times" ]
+},
+"StSpp:BetrayalPower":
+{
+        "NAME" : "Trahison",
+        "DESCRIPTIONS" : ["Les ", " prochaines fois que vous perdez des PV, soignez vous à la place." ]
+},
+"StSpp:SpareBladePower":
+{
+        "NAME" : "Lame de secours",
+        "DESCRIPTIONS" : [ "Quand vous vous defaussez d'un Surin ajoutez ", " Surin dans votre main." ]
+},
+"StSpp:SneakPower":
+{
+        "NAME" : "Camouflé",
+        "DESCRIPTIONS" : ["Quand vous jouez une carte qui n'est pas une Compétence, perdez ", " d'Armure"]
+},
+"StSpp:IgniterPower":
+{
+        "NAME" : "Allumage",
+        "DESCRIPTIONS" : ["Quand vous canalisez une orbe, jouez son passif  ", " fois"]
+},
+"StSpp:TemporaryFocus":
+{
+        "NAME" : "Concentration temporaire",
+        "DESCRIPTIONS" : ["Gagnez " , " de Concentration mais perdez les à la fin du tour."]
+},
+"StSpp:MemoryLeakPower":
+{
+        "NAME" : "Fuite memoire",
+        "DESCRIPTIONS" : ["Vos pouvoirs coute ", " de moins. Ces pouvoirs disparaitront au prochain tour : "]
+},
+"StSpp:PurifyPower":
+{
+        "NAME" : "Purification",
+        "DESCRIPTIONS" : ["Quand vous entrez en Divinité , epuisez jusqu'a "," cartes Status ou Malédictions"]
+},
+"StSpp:FaithPower":
+{
+        "NAME" : "Foi",
+        "DESCRIPTIONS" : ["3 de Mantra comptent comme ", " de Force"]
+},
+"StSpp:VitalPointPower" :
+{
+        "NAME" : "Point vital",
+        "DESCRIPTIONS" : ["Double l'efficacité de vos ", " prochains debuffs / buffs ce tour"]
+}
+}

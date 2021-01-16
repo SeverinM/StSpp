@@ -1,0 +1,26 @@
+{
+"StSpp:PlaceholderPotion": {
+        "NAME": "Placeholder Potion",
+        "DESCRIPTIONS": ["Gain ", " At the end of your turn, lose ", " Strength."]
+},
+"StSpp:SecondWindPotion" :
+{
+        "NAME" : "Second wind Potion",
+        "DESCRIPTIONS" : ["Remove all your debuffs."]
+},
+"StSpp:ScatteredPotion" :
+{
+      "NAME" : "Scattered Fire Potion",
+        "DESCRIPTIONS" : ["Deal ", " Damages."," Usable ", " times."]
+},
+  "StSpp:ScatteredWeakPotion" :
+  {
+    "NAME" : "Scattered Weak Potion",
+    "DESCRIPTIONS" : ["Apply ", " Weak."," Usable ", " times."]
+  },
+  "StSpp:InhibitionPotion" :
+  {
+    "NAME" : "Inhibiting potion",
+    "DESCRIPTIONS" : ["Remove every buff of an enemy for ", " turns."]
+  }
+}
