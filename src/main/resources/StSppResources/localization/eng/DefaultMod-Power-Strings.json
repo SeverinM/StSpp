@@ -40,7 +40,7 @@
 "StSpp:SpareBladePower":
 {
         "NAME" : "Spare blade",
-        "DESCRIPTIONS" : [ "Whenever you discard a shiv , add ", " shiv to your hand." ]
+        "DESCRIPTIONS" : [ "Draw ", " cards for every 6 Shiv played." ]
 },
 "StSpp:SneakPower":
 {

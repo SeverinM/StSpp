@@ -25,7 +25,7 @@ public class CopyPaste extends CustomCard
     public static final String ID = DefaultMod.makeID(CopyPaste.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("CopyPaste.png");
 
     public CopyPaste()
     {

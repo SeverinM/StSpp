@@ -35,7 +35,7 @@ public class MindBarrier extends CustomCard implements OnStartBattleSubscriber
     {
         super(ID, cardStrings.NAME, IMG, 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.UNCOMMON, CardTarget.SELF);
         BaseMod.subscribe(this);
-        this.baseMagicNumber = this.magicNumber = this.upgraded ? 3 : 0;
+        this.baseMagicNumber = this.magicNumber = 0;
     }
 
     @Override
@@ -53,7 +53,7 @@ public class MindBarrier extends CustomCard implements OnStartBattleSubscriber
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster)
     {
-        addToBot(new GainBlockAction(abstractPlayer, this.magicNumber));
+        addToBot(new GainBlockAction(abstractPlayer, this.magicNumber + ( this.upgraded ? 3 : 0 ) ) );
     }
 
     @Override

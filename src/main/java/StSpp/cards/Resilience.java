@@ -2,6 +2,8 @@ package StSpp.cards;
 
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,6 +13,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import StSpp.DefaultMod;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import org.apache.logging.log4j.LogManager;
 
@@ -28,7 +32,7 @@ public class Resilience extends CustomCard
     public Resilience( )
     {
         super(ID, cardStrings.NAME, IMG, 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseDamage = 6;
+        this.baseDamage = 7;
         this.baseMagicNumber = 2;
     }
 
@@ -56,7 +60,7 @@ public class Resilience extends CustomCard
             p = (AbstractPower)var2.next();
 
             //Not affected by weak
-            if ( p.ID == "Weakened" && p.amount > 0)
+            if ( ( p.ID == WeakPower.POWER_ID || p.ID == VulnerablePower.POWER_ID ) && p.amount > 0)
             {
                 tmp *= this.baseMagicNumber;
                 continue;
@@ -117,7 +121,7 @@ public class Resilience extends CustomCard
         this.applyPowers();
         DamageInfo info = new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.NORMAL);
         info.applyEnemyPowersOnly(abstractMonster);
-        abstractMonster.damage(info);
+        addToBot(new DamageAction(abstractMonster,info, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 
     @Override

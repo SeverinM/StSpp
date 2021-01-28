@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import StSpp.DefaultMod;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.FrailPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import java.util.Iterator;
 
@@ -27,7 +29,7 @@ public class Unbreakable extends CustomCard
     {
         super(ID, cardStrings.NAME, IMG, 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = 2;
-        this.baseBlock = 5;
+        this.baseBlock = 6;
     }
 
     @Override
@@ -54,7 +56,7 @@ public class Unbreakable extends CustomCard
             p = (AbstractPower)var2.next();
 
             //Not affected by frail
-            if ( p.ID == "Frail" && p.amount > 0)
+            if ( ( p.ID == FrailPower.POWER_ID || p.ID == VulnerablePower.POWER_ID ) && p.amount > 0)
             {
                 tmp *= this.magicNumber;
                 continue;

@@ -43,6 +43,7 @@ public class Converter extends CustomCard
         if ( AbstractDungeon.player != null)
         {
             this.baseMagicNumber = this.magicNumber = estimateDamageUpgrade();
+            initializeDescription();
         }
     }
 
@@ -89,7 +90,6 @@ public class Converter extends CustomCard
         {
             upgradeName();
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            this.initializeDescription();
         }
     }
 
@@ -116,9 +116,19 @@ public class Converter extends CustomCard
     }
 
     @Override
+    public void applyPowers()
+    {
+        super.applyPowers();
+        this.baseMagicNumber = this.magicNumber = estimateDamageUpgrade();
+    }
+
+    @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster)
     {
+        this.baseMagicNumber = this.magicNumber = estimateDamageUpgrade();
         upgradeDamage(this.magicNumber);
+        applyPowers();
+        initializeDescription();
         addToBot(new EvokeAllOrbsAction());
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, this.damage), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }

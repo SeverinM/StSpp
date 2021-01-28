@@ -35,7 +35,7 @@
 "StSpp:SpareBladePower":
 {
         "NAME" : "Lame de secours",
-        "DESCRIPTIONS" : [ "Quand vous vous defaussez d'un Surin ajoutez ", " Surin dans votre main." ]
+        "DESCRIPTIONS" : [ "Piochez une carte tous les ", " Surin joués." ]
 },
 "StSpp:SneakPower":
 {

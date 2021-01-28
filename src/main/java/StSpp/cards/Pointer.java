@@ -34,6 +34,7 @@ import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.Random;
 
 import static StSpp.DefaultMod.makeCardPath;
 
@@ -62,14 +63,17 @@ public class Pointer extends CustomCard
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster)
     {
-        int startIndex = MathUtils.random( AbstractDungeon.player.hand.group.size() - 1 );
+        if ( AbstractDungeon.player.hand.group.size() == 1 )
+            return;
+
+        int startIndex = new Random().nextInt(AbstractDungeon.player.hand.group.size() - 1);
         for (int i = startIndex + 1; i != startIndex; i = ( i + 1) % AbstractDungeon.player.hand.group.size() )
         {
             AbstractCard c = AbstractDungeon.player.hand.group.get(i);
-            if ( !(c == this || c.type == CardType.CURSE || c.type == CardType.STATUS) )
+            if ( !(c == this || c.type == CardType.CURSE || c.type == CardType.STATUS || c instanceof Pointer) )
             {
                 AbstractCreature creat = AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
-                this.addToTop(new NewQueueCardAction(c, creat, false, true));
+                this.addToBot(new NewQueueCardAction(c, creat, false, true));
                 break;
             }
         }

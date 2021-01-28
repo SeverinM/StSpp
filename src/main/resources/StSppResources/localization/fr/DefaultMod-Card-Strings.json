@@ -22,14 +22,14 @@
   "StSpp:Unbreakable" :
   {
     "NAME" : "Incassable",
-    "DESCRIPTION" : "Gagnez !B! d'armures. NL Gagnez le double si vous êtes fragile.",
-    "UPGRADE_DESCRIPTION" : "Gagnez !B! d'armures. NL Gagnez le triple si vous êtes fragile."
+    "DESCRIPTION" : "Gagnez !B! d'Armure. NL Gagnez le double si vous êtes Fragile.",
+    "UPGRADE_DESCRIPTION" : "Gagnez !B! d'Armure. NL Gagnez le triple si vous êtes Fragile."
   },
   "StSpp:Resilience" :
   {
     "NAME" : "Obstination",
-    "DESCRIPTION" : "Infligez !D! dégâts. NL Doublez les dégâts si vous êtes affaibli.",
-    "UPGRADE_DESCRIPTION" : "Infligez !D! dégâts. NL Triplez les dégâts si vous êtes affaibli."
+    "DESCRIPTION" : "Infligez !D! dégâts. NL Doublez les dégâts si vous êtes Affaibli.",
+    "UPGRADE_DESCRIPTION" : "Infligez !D! dégâts. NL Triplez les dégâts si vous êtes Affaibli."
   },
   "StSpp:TimeParadox" :
   {
@@ -51,7 +51,7 @@
   "StSpp:Saturation" :
   {
     "NAME" : "Saturation",
-    "DESCRIPTION" : "Jouable que si vous n'avez aucun emplacement vide, gagnez !M! concentration. NL Épuisement.",
+    "DESCRIPTION" : "Jouable que si vous n'avez aucun emplacement vide, gagnez !M! Concentration. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       "Certains emplacements sont vides"
     ]
@@ -90,8 +90,8 @@
   "StSpp:Vengeance":
   {
     "NAME" : "Vengeance",
-    "DESCRIPTION" : "Jouable que si vos autres cartes sont des maledictions ou status. NL Ajoutez un gourdin qui coute 0.",
-    "UPGRADE_DESCRIPTION" : "Jouable que si vos autres cartes sont des maledictions ou status. NL Ajoutez un gourdin+ qui coute 0."
+    "DESCRIPTION" : "Jouable que si vos autres cartes sont des Maledictions ou Status. NL Ajoutez un gourdin qui coute 0.",
+    "UPGRADE_DESCRIPTION" : "Jouable que si vos autres cartes sont des Maledictions ou Status. NL Ajoutez un gourdin+ qui coute 0."
   },
   "StSpp:Damnation":
   {
@@ -122,7 +122,7 @@
   "StSpp:ChainedTrap":
   {
     "NAME" : "Piège en serie",
-    "DESCRIPTION" : "Appliquez !M! debuffs aleatoire pour chaque [E] que vous avez."
+    "DESCRIPTION" : "Appliquez !M! debuffs aleatoire.."
   },
   "StSpp:KnowledgeIsPower" :
   {
@@ -151,8 +151,7 @@
   "StSpp:StrikeFirst" :
   {
     "NAME" : "Frapper le premier",
-    "DESCRIPTION" : "Infligez !D! dégâts. NL Si l'ennemi n'a pas l'intention d'attaquer piochez une carte.",
-    "UPGRADE_DESCRIPTION" : "Infligez !D! dégâts. NL Si l'ennemi n'a pas l'intention d'attaquer piochez !M! cartes."
+    "DESCRIPTION" : "Infligez !D! dégâts. NL Si l'ennemi n'a pas l'intention d'attaquer appliquez 2 Vulnerable."
   },
   "StSpp:HumanShield":
   {
@@ -166,13 +165,13 @@
   },
   "StSpp:PoisonousPunch":
   {
-    "NAME" : "Coup de poing empoisonné",
+    "NAME" : "Infection",
     "DESCRIPTION" : "Infligez !D! dégâts. NL s'il s'agit de votre carte la plus a droite de votre main appliquez !D! Poison."
   },
   "StSpp:NonchalentStrike":
   {
     "NAME" : "Frappe stoïque",
-    "DESCRIPTION" : "Infligez !D! dégâts ( non affecté par les modificateurs )."
+    "DESCRIPTION" : "Infligez !D! dégâts. NL Ignore les modificateurs."
   },
   "StSpp:Anticipation" :
   {
@@ -215,7 +214,7 @@
   "StSpp:SpareBlade":
   {
     "NAME" : "Lame de secours",
-    "DESCRIPTION" : "Quand vous defaussez un Surin , ajoutez un Surin dans votre main."
+    "DESCRIPTION" : "Tous les 6 Surin joués piochez une carte."
   },
   "StSpp:Pointer":
   {
@@ -225,7 +224,7 @@
   "StSpp:CopyPaste":
   {
     "NAME" : "Copier-Coller",
-    "DESCRIPTION" : "Remplissez tous vos emplacements libres avec votre orbe la plus à gauche."
+    "DESCRIPTION" : "Remplissez tous vos emplacements libres avec votre orbe la plus à gauche. NL Epuisement."
   },
   "StSpp:TheBiggerTheyAre":
   {
@@ -235,7 +234,7 @@
   "StSpp:Landslide":
   {
     "NAME" : "Eboulement",
-    "DESCRIPTION" : "TOUS les ennemies perdent !M! PV mais gagnent !M! d'Armure et Barricade."
+    "DESCRIPTION" : "Prenez TOUS !D! dégats puis gagnez !M! d'Armure."
   },
   "StSpp:Igniter" :
   {
@@ -250,8 +249,8 @@
   "StSpp:Converter" :
   {
     "NAME" : "Convertisseur",
-    "DESCRIPTION" : "Declenchez toutes vos orbes pour augmenter les dégats de cette carte de !M! (selon les orbes). NL Infligez !D! dégats.",
-    "UPGRADE_DESCRIPTION" : "Declenchez toutes vos orbes pour augmenter les dégats de cette carte de !M! (selon les orbes x 2). NL Infligez !D! dégats."
+    "DESCRIPTION" : "Declenchez toutes vos orbes pour augmenter les dégats de cette carte (selon les orbes). NL Infligez !D! ( + !M! ) dégats.",
+    "UPGRADE_DESCRIPTION" : "Declenchez toutes vos orbes pour augmenter les dégats de cette (selon les orbes x 2). NL Infligez !D! ( + !M! ) dégats."
   },
   "StSpp:TimeDodge" :
   {
@@ -286,7 +285,7 @@
   "StSpp:Faith":
   {
     "NAME" : "Foi",
-    "DESCRIPTION" : "Gagnez 3 Mantra. NL 3 Mantra comptent comme 1 de Force."
+    "DESCRIPTION" : "Gagnez 2 Mantra. NL 2 Mantra comptent comme 1 de Force."
   },
   "StSpp:VitalPoint":
   {

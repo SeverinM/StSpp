@@ -107,7 +107,7 @@ public class MemoryLeakPower extends AbstractPower implements PostPowerApplySubs
     public void receivePostPowerApplySubscriber(AbstractPower abstractPower, AbstractCreature abstractCreature, AbstractCreature abstractCreature1)
     {
         //Avoid leak power in itself
-        if ( !(abstractPower.ID == MemoryLeakPower.POWER_ID && abstractPower.amount == 1))
+        if ( !(abstractPower.ID == MemoryLeakPower.POWER_ID && abstractPower.amount == 1) && abstractCreature == abstractCreature1)
         {
             if ( allPowers.contains(abstractPower))
             {

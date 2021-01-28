@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import StSpp.DefaultMod;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
@@ -39,7 +40,7 @@ public class StrikeFirst extends CustomCard
     public static final String ID = DefaultMod.makeID(StrikeFirst.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("StrikeFirst.png");
 
     public StrikeFirst()
     {
@@ -54,10 +55,7 @@ public class StrikeFirst extends CustomCard
         if ( canUpgrade())
         {
             this.upgradeName();
-            this.upgradeDamage(3);
-            this.upgradeMagicNumber(1);
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+            this.upgradeDamage(4);
         }
     }
 
@@ -80,7 +78,7 @@ public class StrikeFirst extends CustomCard
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         if (abstractMonster != null && abstractMonster.getIntentBaseDmg() <= 0)
         {
-            this.addToBot(new DrawCardAction(this.magicNumber));
+            this.addToBot(new ApplyPowerAction(abstractMonster, abstractPlayer, new VulnerablePower(abstractMonster, 2, false)));
         }
     }
 }

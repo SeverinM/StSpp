@@ -72,10 +72,7 @@ public class PoisonousPunch extends CustomCard
 
         if ( IsRightMost())
         {
-            if (abstractMonster.lastDamageTaken > 0)
-            {
-                this.addToBot(new ApplyPowerAction(abstractMonster,abstractPlayer, new PoisonPower(abstractMonster, abstractPlayer, this.damage)));
-            }
+            this.addToBot(new ApplyPowerAction(abstractMonster,abstractPlayer, new PoisonPower(abstractMonster, abstractPlayer, this.damage)));
         }
     }
 }

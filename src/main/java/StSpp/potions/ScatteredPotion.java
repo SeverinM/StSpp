@@ -1,7 +1,10 @@
 package StSpp.potions;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomSavable;
+import basemod.interfaces.PostPotionUseSubscriber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
@@ -13,6 +16,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.potions.PotionSlot;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
@@ -83,14 +87,29 @@ public class ScatteredPotion extends CustomPotion implements CustomSavable<Integ
     }
 
     @Override
-    public void use(AbstractCreature abstractCreature) {
+    public void use(AbstractCreature abstractCreature)
+    {
         DamageInfo info = new DamageInfo(AbstractDungeon.player, this.potency, DamageInfo.DamageType.THORNS);
         info.applyEnemyPowersOnly(abstractCreature);
-        this.addToBot(new DamageAction(abstractCreature, info, AbstractGameAction.AttackEffect.FIRE));
         if ( usageLeft > 1 )
         {
-            addToBot(new ObtainPotionAction(new ScatteredPotion(usageLeft - 1)));
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    for ( AbstractPotion ap : AbstractDungeon.player.potions)
+                    {
+                        if ( ap instanceof PotionSlot )
+                        {
+                            this.isDone = true;
+                            AbstractDungeon.player.obtainPotion(new ScatteredPotion(usageLeft - 1));
+                            break;
+                        }
+                    }
+                    this.tickDuration();
+                }
+            });
         }
+        this.addToBot(new DamageAction(abstractCreature, info, AbstractGameAction.AttackEffect.FIRE));
     }
 
     @Override

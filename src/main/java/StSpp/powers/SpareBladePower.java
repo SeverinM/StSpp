@@ -2,13 +2,16 @@ package StSpp.powers;
 
 import StSpp.CustomTags;
 import StSpp.cards.MuscleMemory;
+import basemod.devcommands.draw.Draw;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -28,16 +31,21 @@ public class SpareBladePower extends AbstractPower
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    static final int REQUIRED = 6;
+
     private static final Texture tex84 = TextureLoader.getTexture("StSppResources/images/powers/placeholder_power84.png");
     private static final Texture tex32 = TextureLoader.getTexture("StSppResources/images/powers/placeholder_power32.png");
 
+    int draw = 0;
+
     public SpareBladePower(int amount)
     {
+        draw = amount;
         name = NAME;
         ID = POWER_ID;
 
         this.owner = AbstractDungeon.player;
-        this.amount = amount;
+        this.amount = REQUIRED;
 
         type = PowerType.BUFF;
         isTurnBased = false;
@@ -49,8 +57,29 @@ public class SpareBladePower extends AbstractPower
         updateDescription();
     }
 
+    public void onUseCard(AbstractCard card, UseCardAction action)
+    {
+        if ( card.cardID != Shiv.ID )
+            return;
+
+        --this.amount;
+        if (this.amount == 0) {
+            this.flash();
+            this.amount = REQUIRED;
+            addToBot(new DrawCardAction(draw));
+        }
+
+        this.updateDescription();
+    }
+
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        draw++;
+        this.updateDescription();
+    }
+
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + draw + DESCRIPTIONS[1];
     }
 }

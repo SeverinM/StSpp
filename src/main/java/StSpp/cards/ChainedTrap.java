@@ -30,8 +30,8 @@ public class ChainedTrap extends CustomCard
 
     public ChainedTrap()
     {
-        super(ID,cardStrings.NAME,IMG,1,cardStrings.DESCRIPTION,CardType.SKILL,CardColor.GREEN,CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.baseMagicNumber = 2;
+        super(ID,cardStrings.NAME,IMG,1,cardStrings.DESCRIPTION,CardType.SKILL,CardColor.GREEN,CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -40,7 +40,7 @@ public class ChainedTrap extends CustomCard
         if ( canUpgrade())
         {
             this.upgradeName();
-            this.upgradeMagicNumber(1);
+            this.upgradeMagicNumber(2);
         }
     }
 
@@ -48,19 +48,20 @@ public class ChainedTrap extends CustomCard
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster)
     {
         int energy = (EnergyPanel.totalCount - this.cost) * this.magicNumber;
-        for (int i = 0; i < energy; i++)
+        Random rng = new Random();
+        for (int i = 0; i < this.magicNumber; i++)
         {
-            AbstractMonster monster = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
+            AbstractMonster monster = abstractMonster;
             AbstractPower chosenPower = new PoisonPower(monster, abstractPlayer, 1);
-            int rand = new Random().nextInt(6);
+            int rand = rng.nextInt(5);
 
             if ( rand == 1 )
             {
-                chosenPower = new WeakPower(monster,this.magicNumber, false);
+                chosenPower = new WeakPower(monster,1, false);
             }
             else if ( rand == 2)
             {
-                chosenPower = new VulnerablePower(monster, this.magicNumber, false);
+                chosenPower = new VulnerablePower(monster, 1, false);
             }
             else if (rand == 3)
             {
@@ -69,15 +70,6 @@ public class ChainedTrap extends CustomCard
             else if (rand == 4)
             {
                 chosenPower = new StrengthPower(monster, -1);
-            }
-            else if (rand == 5)
-            {
-                if (MathUtils.random(10) < 5)
-                {
-                    i--;
-                    continue;
-                }
-                chosenPower = new BlockReturnPower(monster, 1);
             }
 
             addToBot(new ApplyPowerAction(monster, abstractPlayer,chosenPower));

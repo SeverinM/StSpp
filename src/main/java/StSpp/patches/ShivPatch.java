@@ -27,6 +27,7 @@ import java.util.ArrayList;
 
 public class ShivPatch
 {
+    /*
     @SpirePatch(clz=AbstractCard.class, method="triggerOnManualDiscard")
     public static class ShivDiscardPatch
     {
@@ -38,5 +39,5 @@ public class ShivPatch
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Shiv(), amount));
             }
         }
-    }
+    }*/
 }

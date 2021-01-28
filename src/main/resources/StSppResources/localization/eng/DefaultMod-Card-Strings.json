@@ -2,39 +2,39 @@
   "StSpp:MinorTwinStrike" :
   {
     "NAME" : "Minor Twin Strike",
-    "DESCRIPTION" : "Deal !D! damages twice. NL draw a card."
+    "DESCRIPTION" : "Deal !D! damage twice. NL Draw a card."
   },
   "StSpp:BladeOfBlood" :
   {
-    "NAME" : "Sword of blood",
-    "DESCRIPTION" : "Lose half of your HP. NL Deal as many damage as your missing health. NL Exhaust"
+    "NAME" : "Sword Of Blood",
+    "DESCRIPTION" : "Lose half of your HP. NL Deal as many damage as your missing health. NL Exhaust."
   },
   "StSpp:CounterStrike" :
   {
-    "NAME" : "Heavy armor",
+    "NAME" : "Heavy Armor",
     "DESCRIPTION" : "Lose 1 Strength. NL Gain !B! Block."
   },
   "StSpp:Panic" :
   {
     "NAME" : "Panic",
-    "DESCRIPTION" : "Cost 1 less for each unique debuffs. NL Gain [E] and draw !M! cards."
+    "DESCRIPTION" : "Cost 1 less for each unique debuff you currently have. NL Gain [E] and draw !M! cards."
   },
   "StSpp:Unbreakable" :
   {
     "NAME" : "Unbreakable",
-    "DESCRIPTION" : "Gain !B! Block. NL Double efficiency if frail.",
-    "UPGRADE_DESCRIPTION" : "Gain !B! block. NL Triple efficiency if frail."
+    "DESCRIPTION" : "Gain !B! Block. NL Double efficiency if Frail or Vulnerable.",
+    "UPGRADE_DESCRIPTION" : "Gain !B! block. NL Triple efficiency if Frail or Vulnerable."
   },
   "StSpp:Resilience" :
   {
     "NAME" : "Resilience",
-    "DESCRIPTION" : "Deal !D! damages. NL Double efficiency if weakened.",
-    "UPGRADE_DESCRIPTION" : "Deal !D! damages. NL Triple efficiency if weakened."
+    "DESCRIPTION" : "Deal !D! damage. NL Double efficiency if Weak or Vulnerable.",
+    "UPGRADE_DESCRIPTION" : "Deal !D! damage. NL Triple efficiency if Weak or Vulnerable."
   },
   "StSpp:TimeParadox" :
   {
-    "NAME" : "Time paradox",
-    "DESCRIPTION" : "At the next turn add !M! cards 'at the next turn' in your hand."
+    "NAME" : "Time Paradox",
+    "DESCRIPTION" : "Next turn add !M! cards 'next turn' in your hand."
   },
   "StSpp:Berserk" :
   {
@@ -51,7 +51,7 @@
   "StSpp:Saturation" :
   {
     "NAME" : "Saturation",
-    "DESCRIPTION" : "Can only be played if you don't have any empty slots. NL Gain !M! Focus. NL Exhaust ",
+    "DESCRIPTION" : "Can only be played if you don't have any empty slots. NL Gain !M! Focus. NL Exhaust. ",
     "EXTENDED_DESCRIPTION": [
       "Not all my slots are taken"
     ]
@@ -63,7 +63,7 @@
   },
   "StSpp:MuscleMemory" :
   {
-    "NAME" : "Muscle memory",
+    "NAME" : "Muscle Memory",
     "DESCRIPTION" : "At the end of turn add a random copy of a non-basic card you played this turn into the draw pile."
   },
   "StSpp:Dive" :
@@ -73,18 +73,18 @@
   },
   "StSpp:Jab" :
   {
-    "NAME" : "Well-placed strike",
-    "DESCRIPTION" : "Deal !D! damages. NL For each !M! damages dealt gain [E] and draw one card. NL Exhaust."
+    "NAME" : "Well-Placed Strike",
+    "DESCRIPTION" : "Deal !D! damage. NL For each !M! damage dealt gain [E] and draw one card. NL Exhaust."
   },
   "StSpp:CorrosivePoison" :
   {
     "NAME" : "Stimulant",
-    "DESCRIPTION" : "Gain [E] . NL Apply yourself 3 poison.",
-    "UPGRADE_DESCRIPTION" : "Gain [E] [E] . NL Apply yourself 3 poison."
+    "DESCRIPTION" : "Gain [E] . NL Apply yourself 3 Poison.",
+    "UPGRADE_DESCRIPTION" : "Gain [E] [E] . NL Apply yourself 3 Poison."
   },
   "StSpp:IntoTheAbyss" :
   {
-    "NAME" : "Into the abyss",
+    "NAME" : "Into The Abyss",
     "DESCRIPTION" : "Exhaust your draw pile. NL Exhaust."
   },
   "StSpp:Vengeance":
@@ -111,29 +111,29 @@
   "StSpp:Betrayal":
   {
     "NAME" : "Betrayal",
-    "DESCRIPTION" : "For the next X times whenever you lose HP from red cards , heal you instead.",
-    "UPGRADE_DESCRIPTION" : "For the next X + 1 times whenever you lose HP from red cards , heal you instead."
+    "DESCRIPTION" : "For the next X times whenever you lose HP from cards heal you instead.",
+    "UPGRADE_DESCRIPTION" : "For the next X + 1 times whenever you lose HP from cards heal you instead."
   },
   "StSpp:FiercePoison":
   {
-    "NAME" : "Virulent poison",
-    "DESCRIPTION" : "Apply !M! poison. NL Double the effect each time this card is discarded or played."
+    "NAME" : "Virulent Poison",
+    "DESCRIPTION" : "Apply !M! Poison. NL Double the effect each time this card is discarded or played."
   },
   "StSpp:ChainedTrap":
   {
-    "NAME" : "Chained trap",
-    "DESCRIPTION" : "Apply !M! random debuff to a random enemy. NL Repeat for each [E] you currently have."
+    "NAME" : "Chained Trap",
+    "DESCRIPTION" : "Apply !M! random debuffs."
   },
   "StSpp:KnowledgeIsPower" :
   {
-    "NAME" : "Knowledge is power",
+    "NAME" : "Knowledge Is Power",
     "DESCRIPTION" : "Deal as many damage as the current floor ( !D! , reset at each act )."
   },
   "StSpp:MakeshiftWeapon" :
   {
-    "NAME" : "Makeshift weapon",
+    "NAME" : "Makeshift Weapon",
     "DESCRIPTION" : "Deal !D! damages to all enemies. NL Lose a random relic. NL Exhaust.",
-    "UPGRADE_DESCRIPTION" : "Deal !D! damages to all enemies. NL lose your rightmost relic. NL Exhaust.",
+    "UPGRADE_DESCRIPTION" : "Deal !D! damages to all enemies. NL Lose your rightmost relic. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "I don't have any relic"
     ]
@@ -151,12 +151,11 @@
   "StSpp:StrikeFirst" :
   {
     "NAME" : "Strike First",
-    "DESCRIPTION" : "Deal !D! damages. NL If the target does not intend to attack draw a card.",
-    "UPGRADE_DESCRIPTION" : "Deal !D! damages. NL If the target does not intend to attack draw !M! cards."
+    "DESCRIPTION" : "Deal !D! damages. NL If the target does not intend to attack apply 2 Vulnerable."
   },
   "StSpp:HumanShield":
   {
-    "NAME" : "Human shield",
+    "NAME" : "Human Shield",
     "DESCRIPTION" : "Gain as many block as ALL enemies summed up.",
     "UPGRADE_DESCRIPTION" : "Gain the double of block of ALL enemies summed up.",
     "EXTENDED_DESCRIPTION":
@@ -166,13 +165,13 @@
   },
   "StSpp:PoisonousPunch":
   {
-    "NAME" : "Poisonous Punch",
+    "NAME" : "Infection",
     "DESCRIPTION" : "Deal !D! damages. NL If this card is your rightmost in hand apply !D! Poison."
   },
   "StSpp:NonchalentStrike":
   {
     "NAME" : "Stoic Strike",
-    "DESCRIPTION" : "Deal !D! damages ( regardless modifiers ) ."
+    "DESCRIPTION" : "Deal !D! damages. Ignore modifiers."
   },
   "StSpp:Anticipation" :
   {
@@ -183,18 +182,18 @@
   "StSpp:Cataclysm" :
   {
     "NAME" : "Cataclysm",
-    "DESCRIPTION" : "Deal !D! damages. NL Gain !B! block. NL Draw 5 cards. NL Gain [E] [E] [E] [E] [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION" : "Deal !D! damages. NL Gain !B! block. NL Draw 5 cards. NL Gain [E] [E] [E] [E] [E]"
+    "DESCRIPTION" : "Deal !D! damage. NL Gain !B! Block. NL Draw 5 cards. NL Gain [E] [E] [E] [E] [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION" : "Deal !D! damage. NL Gain !B! Block. NL Draw 5 cards. NL Gain [E] [E] [E] [E] [E]"
   },
   "StSpp:Mask" :
   {
     "NAME" : "Mask",
-    "DESCRIPTION" : "Deal !D! damages to ALL enemies BUT the target."
+    "DESCRIPTION" : "Deal !D! damage to ALL enemies BUT the target."
   },
   "StSpp:Fierceness":
   {
     "NAME" : "Fierceness",
-    "DESCRIPTION" : "Deal !D! damages X times. NL Each strike increment damages by !M! ."
+    "DESCRIPTION" : "Deal !D! damage and increase damage by !M! . NL Repeat X times."
   },
   "StSpp:Turnabout":
   {
@@ -203,18 +202,19 @@
   },
   "StSpp:AbandonFlesh":
   {
-    "NAME" : "Abandon flesh",
-    "DESCRIPTION" : "Gain 1 Intangible next turn. NL Exhaust ."
+    "NAME" : "Abandon Flesh",
+    "DESCRIPTION" : "Gain 1 Intangible next turn. NL Exhaust."
   },
   "StSpp:MindBarrier":
   {
     "NAME" : "Mind Barrier",
-    "DESCRIPTION" : "Gain as many block as cards with differents names you played this fight ( !M! )."
+    "DESCRIPTION" : "Gain as many Block as cards with differents names you played this fight ( !M! ).",
+    "UPGRADE_DESCRIPTION" : "Gain as many Block as cards with differents names you played this fight ( !M! ) + 3."
   },
   "StSpp:SpareBlade":
   {
     "NAME" : "Spare blade",
-    "DESCRIPTION" : "Whenever you discard a shiv , add a shiv to your hand."
+    "DESCRIPTION" : "Draw a card every 6 Shiv played."
   },
   "StSpp:Pointer":
   {
@@ -224,7 +224,7 @@
   "StSpp:CopyPaste":
   {
     "NAME" : "Copy-Paste",
-    "DESCRIPTION" : "Fill all your empty orb with your leftmost orb."
+    "DESCRIPTION" : "Fill all your empty slots with your leftmost orb. NL Exhaust."
   },
   "StSpp:TheBiggerTheyAre":
   {
@@ -233,8 +233,8 @@
   },
   "StSpp:Landslide":
   {
-    "NAME" : "Land slide",
-    "DESCRIPTION" : "All enemies lose !M! HP but gain Barricade and !M! Block ."
+    "NAME" : "Landslide",
+    "DESCRIPTION" : "EVERYONE take !D! damage then gain !M! Block."
   },
   "StSpp:Igniter" :
   {
@@ -249,12 +249,12 @@
   "StSpp:Converter" :
   {
     "NAME" : "Converter",
-    "DESCRIPTION" : "Evoke all orbs to increase this card damages by !M! (depend of orbs). NL Deal !D! damages.",
-    "UPGRADE_DESCRIPTION" : "Evoke all orbs to increase this card damages by !M! (depend of orbs x 2). NL Deal !D! damages."
+    "DESCRIPTION" : "Evoke all orbs to increase this card damages (depend of orbs). NL Deal !D! ( + !M! ) damage.",
+    "UPGRADE_DESCRIPTION" : "Evoke all orbs to increase this card damages (depend of orbs x 2). NL Deal !D! ( + !M! ) damage."
   },
   "StSpp:TimeDodge" :
   {
-    "NAME" : "Timed dodge",
+    "NAME" : "Timed Dodge",
     "DESCRIPTION" : "Playable only during even turns. NL Gain !M! Block. NL Retain."
   },
   "StSpp:Chanting" :
@@ -269,7 +269,7 @@
   },
   "StSpp:LatentStrike" :
   {
-    "NAME" : "Latent strike",
+    "NAME" : "Latent Strike",
     "DESCRIPTION" : "Deal !D! damages. NL Apply non-blocked damages as Mark."
   },
   "StSpp:MemoryLeak":
@@ -280,12 +280,12 @@
   "StSpp:Purify":
   {
     "NAME" : "Purify",
-    "DESCRIPTION" : "Whenever you enter in divinity Stance, exhaust up to !M! curses or status cards."
+    "DESCRIPTION" : "Whenever you enter in Divinity Stance, exhaust up to !M! curses or status cards."
   },
   "StSpp:Faith":
   {
     "NAME" : "Faith",
-    "DESCRIPTION" : "Gain 3 Mantra. NL 3 Mantra count as 1 Strength."
+    "DESCRIPTION" : "Gain 2 Mantra. NL 2 Mantra count as 1 Strength."
   },
   "StSpp:VitalPoint":
   {

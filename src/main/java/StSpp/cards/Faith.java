@@ -45,6 +45,6 @@ public class Faith extends CustomCard
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster)
     {
         addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer,new FaithPower(1)));
-        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new MantraPower(abstractPlayer, 3)));
+        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new MantraPower(abstractPlayer, 2)));
     }
 }

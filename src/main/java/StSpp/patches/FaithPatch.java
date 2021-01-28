@@ -47,7 +47,7 @@ public class FaithPatch
                 return SpireReturn.Continue();
 
             if ( AbstractDungeon.player.hasPower(FaithPower.POWER_ID))
-                damage += ( p.amount / (int)3 ) * AbstractDungeon.player.getPower(FaithPower.POWER_ID).amount;
+                damage += ( p.amount / (int)2 ) * AbstractDungeon.player.getPower(FaithPower.POWER_ID).amount;
             return SpireReturn.Return(damage);
         }
     }

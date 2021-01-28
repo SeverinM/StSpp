@@ -46,7 +46,8 @@ public class Landslide extends CustomCard
     public Landslide()
     {
         super(ID, cardStrings.NAME, IMG, 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        this.magicNumber = this.baseMagicNumber = 10;
+        this.magicNumber = this.baseMagicNumber = 15;
+        this.damage = this.baseDamage = 10;
     }
 
     @Override
@@ -64,10 +65,12 @@ public class Landslide extends CustomCard
     {
         for( AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters)
         {
-            addToBot(new LoseHPAction(m, abstractPlayer, this.magicNumber));
+            addToBot(new DamageAction(m,new DamageInfo(abstractPlayer, this.damage), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
             addToBot(new GainBlockAction(m, this.magicNumber));
-            addToBot(new ApplyPowerAction(m, abstractPlayer,new BarricadePower(m)));
         }
+
+        addToBot(new DamageAction(abstractPlayer,new DamageInfo(abstractPlayer, this.damage), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        addToBot(new GainBlockAction(abstractPlayer, this.magicNumber));
     }
 
     @Override
