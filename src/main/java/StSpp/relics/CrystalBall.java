@@ -51,6 +51,12 @@ public class CrystalBall extends CustomRelic
         int iCardToShowBriefly = 10;
         for (AbstractCard c : cardToBrowse)
         {
+            if ( c.cost > 0 )
+            {
+                c.cost--;
+                c.costForTurn = c.cost;
+            }
+
             AbstractDungeon.player.masterDeck.group.add(c);
 
             if  ( iCardToShowBriefly > 0 && MathUtils.random(10) < 5 )

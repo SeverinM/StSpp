@@ -57,41 +57,12 @@ public class PurifyPower extends AbstractPower
     {
         if ( newStance instanceof DivinityStance)
         {
-            Hashtable<AbstractCard, CardGroup> allCursesAndStatus = new Hashtable<>();
-
-            for ( AbstractCard c : AbstractDungeon.player.drawPile.group)
+            for ( AbstractPower p : AbstractDungeon.player.powers )
             {
-                if ( c.type == AbstractCard.CardType.CURSE || c.type == AbstractCard.CardType.STATUS)
+                if ( p.type == PowerType.DEBUFF )
                 {
-                    allCursesAndStatus.put(c, AbstractDungeon.player.drawPile);
+                    addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, p));
                 }
-            }
-
-            for ( AbstractCard c : AbstractDungeon.player.hand.group)
-            {
-                if ( c.type == AbstractCard.CardType.CURSE || c.type == AbstractCard.CardType.STATUS)
-                {
-                    allCursesAndStatus.put(c, AbstractDungeon.player.hand);
-                }
-            }
-
-            for ( AbstractCard c : AbstractDungeon.player.discardPile.group)
-            {
-                if ( c.type == AbstractCard.CardType.CURSE || c.type == AbstractCard.CardType.STATUS)
-                {
-                    allCursesAndStatus.put(c, AbstractDungeon.player.discardPile);
-                }
-            }
-
-            int size = Math.min(allCursesAndStatus.size(), amount);
-
-            Enumeration<AbstractCard> cards = allCursesAndStatus.keys();
-
-            while ( cards.hasMoreElements() && size > 0)
-            {
-                AbstractCard c = cards.nextElement();
-                new ExhaustSpecificCardAction(c, allCursesAndStatus.get(c) );
-                size--;
             }
         }
     }
@@ -99,6 +70,6 @@ public class PurifyPower extends AbstractPower
     @Override
     public void updateDescription()
     {
-        description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0];
     }
 }

@@ -29,12 +29,12 @@ public class Purify extends CustomCard
 {
     public static final String ID = DefaultMod.makeID(Purify.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("Purify.png");
 
     public Purify()
     {
         super(ID, cardStrings.NAME, IMG, 2, cardStrings.DESCRIPTION, CardType.POWER, CardColor.PURPLE, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = this.magicNumber = 3;
+        this.baseMagicNumber = this.magicNumber = 1;
     }
 
     @Override
@@ -43,7 +43,7 @@ public class Purify extends CustomCard
         if ( canUpgrade())
         {
             this.upgradeName();
-            this.upgradeMagicNumber(1);
+            this.updateCost(1);
         }
     }
 

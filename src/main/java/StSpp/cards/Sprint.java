@@ -30,7 +30,7 @@ public class Sprint extends CustomCard
     public Sprint()
     {
         super(ID, cardStrings.NAME, IMG, 0, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.COMMON, CardTarget.SELF);
-        this.magicNumber = 1;
+        this.magicNumber = 2;
         this.baseMagicNumber = this.magicNumber;
     }
 
@@ -48,7 +48,13 @@ public class Sprint extends CustomCard
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster)
     {
-        addToBot(new GainEnergyAction(upgraded ? 2 : 1));
+        addToBot(new GainEnergyAction(2));
+
+        if ( this.upgraded )
+        {
+            addToBot(new DrawCardAction(1));
+        }
+
         addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer,new EntanglePower(abstractPlayer)));
     }
 

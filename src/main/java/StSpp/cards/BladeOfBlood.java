@@ -3,31 +3,39 @@ package StSpp.cards;
 import StSpp.actions.BladeOfBloodAction;
 import StSpp.powers.BetrayalPower;
 import basemod.abstracts.CustomCard;
+import basemod.interfaces.OnPlayerDamagedSubscriber;
+import basemod.interfaces.OnStartBattleSubscriber;
+import basemod.interfaces.PostPotionUseSubscriber;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import StSpp.DefaultMod;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
 
 import static StSpp.DefaultMod.makeCardPath;
 
-public class BladeOfBlood extends CustomCard
+public class BladeOfBlood extends CustomCard implements OnPlayerDamagedSubscriber, PostPotionUseSubscriber, OnStartBattleSubscriber
 {
     public static final String ID = DefaultMod.makeID(BladeOfBlood.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("BladeOfBlood.png");
 
     public BladeOfBlood()
     {
-        super(ID, cardStrings.NAME, IMG, 3, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, cardStrings.NAME, IMG, 2, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.RARE, CardTarget.ENEMY);
         this.exhaust = true;
+        this.magicNumber = this.baseMagicNumber = GetPotentialDamages();
     }
 
     @Override
@@ -36,8 +44,22 @@ public class BladeOfBlood extends CustomCard
         if ( this.canUpgrade())
         {
             this.upgradeName();
-            this.upgradeBaseCost(2);
+            this.upgradeBaseCost(1);
         }
+    }
+
+    int GetPotentialDamages()
+    {
+        AbstractPlayer player = AbstractDungeon.player;
+        if( player == null )
+            return 0;
+
+        int maxHP = player.maxHealth;
+        int currentHP = player.currentHealth;
+
+        if ( player.hasPower( BetrayalPower.POWER_ID ))
+            return maxHP + ( currentHP / 2 );
+        return maxHP - ( currentHP / 2 );
     }
 
     @Override
@@ -79,5 +101,35 @@ public class BladeOfBlood extends CustomCard
     @Override
     public AbstractCard makeCopy() {
         return new BladeOfBlood();
+    }
+
+    @Override
+    public int receiveOnPlayerDamaged(int i, DamageInfo damageInfo)
+    {
+        this.magicNumber = this.baseMagicNumber = GetPotentialDamages();
+        return i;
+    }
+
+    @Override
+    public void receivePostPotionUse(AbstractPotion abstractPotion) {
+        this.magicNumber = this.baseMagicNumber = GetPotentialDamages();
+    }
+
+    @Override
+    public void triggerOnOtherCardPlayed(AbstractCard c)
+    {
+        this.magicNumber = this.baseMagicNumber = GetPotentialDamages();
+    }
+
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom)
+    {
+        this.magicNumber = this.baseMagicNumber = GetPotentialDamages();
+    }
+
+    @Override
+    public void triggerWhenDrawn()
+    {
+        this.magicNumber = this.baseMagicNumber = GetPotentialDamages();
     }
 }

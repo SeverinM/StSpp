@@ -27,7 +27,7 @@ public class MemoryLeak extends CustomCard
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static AbstractCard lastUsed = null;
 
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("MemoryLeak.png");
 
     public MemoryLeak()
     {

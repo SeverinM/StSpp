@@ -24,6 +24,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import StSpp.DefaultMod;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
@@ -42,7 +43,7 @@ public class TheBiggerTheyAre extends CustomCard
     public static final String ID = DefaultMod.makeID(TheBiggerTheyAre.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("TheBiggerTheyAre.png");
 
     public TheBiggerTheyAre()
     {
@@ -65,13 +66,28 @@ public class TheBiggerTheyAre extends CustomCard
         return new TheBiggerTheyAre();
     }
 
+    public void triggerOnGlowCheck()
+    {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        Iterator var1 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+        while(var1.hasNext())
+        {
+            AbstractMonster m = (AbstractMonster)var1.next();
+            if (m.currentHealth > AbstractDungeon.player.currentHealth) {
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                break;
+            }
+        }
+    }
+
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster)
     {
         addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         if ( abstractMonster.currentHealth > abstractPlayer.currentHealth )
         {
-            addToBot(new DamageAction(abstractMonster,new DamageInfo(abstractPlayer,this.damage), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+            addToBot(new ApplyPowerAction(abstractPlayer,abstractPlayer, new StrengthPower(abstractPlayer, 1)));
         }
     }
 }

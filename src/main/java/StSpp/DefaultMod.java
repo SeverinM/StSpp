@@ -1,10 +1,7 @@
 package StSpp;
 
 import StSpp.cards.Sprint;
-import StSpp.potions.InhibitionPotion;
-import StSpp.potions.ScatteredPotion;
-import StSpp.potions.ScatteredWeakPotion;
-import StSpp.potions.SecondWindPotion;
+import StSpp.potions.*;
 import StSpp.relics.*;
 import basemod.*;
 import basemod.helpers.RelicType;
@@ -336,6 +333,7 @@ public class DefaultMod implements
         BaseMod.addPotion(SecondWindPotion.class, CardHelper.getColor(9,233,249),CardHelper.getColor(9,233,249), CardHelper.getColor(9,233,249), SecondWindPotion.POTION_ID);
         BaseMod.addPotion(ScatteredPotion.class, CardHelper.getColor(46,209,31),CardHelper.getColor(61,104,57), CardHelper.getColor(61,104,57), ScatteredPotion.POTION_ID);
         BaseMod.addPotion(ScatteredWeakPotion.class, CardHelper.getColor(255,0,0),CardHelper.getColor(255,0,0), CardHelper.getColor(61,104,57), ScatteredWeakPotion.POTION_ID);
+        BaseMod.addPotion(ScatteredArmorPotion.class, CardHelper.getColor(255,0,0),CardHelper.getColor(255,0,0), CardHelper.getColor(61,104,57), ScatteredArmorPotion.POTION_ID);
         logger.info("Done editing potions");
     }
     
@@ -358,7 +356,6 @@ public class DefaultMod implements
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new XCola(), RelicType.SHARED);
         BaseMod.addRelic(new BoiledEgg(), RelicType.SHARED);
-        BaseMod.addRelic(new BrokenTotem(), RelicType.SHARED);
         BaseMod.addRelic(new SailingBoat(), RelicType.SHARED);
         BaseMod.addRelic(new SailorCap(), RelicType.SHARED);
         BaseMod.addRelic(new TwinEgg(), RelicType.SHARED);
@@ -375,8 +372,10 @@ public class DefaultMod implements
         BaseMod.addRelic(new FireArrow(), RelicType.SHARED);
         BaseMod.addRelic(new Balance(), RelicType.SHARED);
         BaseMod.addRelic(new Magatama(), RelicType.SHARED);
-        BaseMod.addRelic(new Dice(), RelicType.SHARED);
-        BaseMod.addRelic(new Monolith(), RelicType.SHARED);
+        //BaseMod.addRelic(new Dice(), RelicType.SHARED);
+        //BaseMod.addRelic(new BrokenLock(), RelicType.SHARED);
+        //BaseMod.addRelic(new Monolith(), RelicType.SHARED);
+        //BaseMod.addRelic(new Metronome(), RelicType.SHARED);
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
         UnlockTracker.markRelicAsSeen(XCola.ID);
@@ -398,8 +397,10 @@ public class DefaultMod implements
         UnlockTracker.markRelicAsSeen(FireArrow.ID);
         UnlockTracker.markRelicAsSeen(Balance.ID);
         UnlockTracker.markRelicAsSeen(Magatama.ID);
-        UnlockTracker.markRelicAsSeen(Dice.ID);
+        //UnlockTracker.markRelicAsSeen(Dice.ID);
         UnlockTracker.markRelicAsSeen(Monolith.ID);
+        //UnlockTracker.markRelicAsSeen(BrokenLock.ID);
+        //UnlockTracker.markRelicAsSeen(Metronome.ID);
         logger.info("Done adding relics!");
     }
     

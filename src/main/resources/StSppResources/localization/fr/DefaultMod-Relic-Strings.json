@@ -82,7 +82,7 @@
   "StSpp:ChessPiece":
   {
     "NAME" : "Pièce d'échec",
-    "FLAVOR" : "Combien de parties cette pièce a vu ?",
+    "FLAVOR" : "Combien de parties cette pièce a t'elle vu ?",
     "DESCRIPTIONS" : ["La premiere carte 'Au prochain tour' #bcoute #b1 #de #bmoins et declenche son effet #btout #bde #bsuite."]
   },
   "StSpp:PileOfSugar" :
@@ -101,7 +101,7 @@
   {
     "NAME" : "Batterie de secours",
     "FLAVOR" : "Utilisé que dans les pires situations",
-    "DESCRIPTIONS" : ["Si commencez un tour sans orbes cannalisé, cannalisez deux orbes aléatoires."]
+    "DESCRIPTIONS" : ["Si vous commencez un tour sans orbes cannalisé, cannalisez deux orbes aléatoires."]
   },
   "StSpp:SpiranhaBones" :
   {
@@ -113,7 +113,7 @@
   {
     "NAME" : "Boule de cristal",
     "FLAVOR" : "On peut voir tous les futurs potentiels à travers cette boule",
-    "DESCRIPTIONS" : ["A l'obtention obtenez ajoutez toutes les cartes rares dans votre deck."]
+    "DESCRIPTIONS" : ["A l'obtention ajoutez toutes les cartes rares dans votre deck, elles coutent 1 de moins."]
   },
   "StSpp:WoodenPendulum":
   {
@@ -125,7 +125,7 @@
   {
     "NAME" : "Arc",
     "FLAVOR" : "Une arme basique mais qui peut devenir une arme mortelle si bien utilisé.",
-    "DESCRIPTIONS" : ["Quand vous jouez une frappe ou une protection basique , lui confere +1 dégats / Armure pour le reste du combat."]
+    "DESCRIPTIONS" : ["Chaque tour, la premiere carte basique est joué deux fois."]
   },
   "StSpp:FireArrow" :
   {
@@ -156,5 +156,17 @@
     "NAME" : "Monolithe",
     "FLAVOR" : "Il est parfaitement plat",
     "DESCRIPTIONS" : ["Au debut du tour, piochez une carte tant que vous n'avez pas joué de carte Pouvoir."]
+  },
+  "StSpp:Metronome" :
+  {
+    "NAME" : "Métronome",
+    "FLAVOR" : "Un rythme parfait",
+    "DESCRIPTIONS" : ["Gagnez [E] durant les tours impairs, perdez [E] durant les tours pairs."]
+  },
+  "StSpp:BrokenLock" :
+  {
+    "NAME" : "Verrou brisé",
+    "FLAVOR" : "Qu'y a t'il de plus excitant que de braver l'interdit ?",
+    "DESCRIPTIONS" : ["Vos cartes n'ont plus de conditions supplementaires pour être joués."]
   }
 }

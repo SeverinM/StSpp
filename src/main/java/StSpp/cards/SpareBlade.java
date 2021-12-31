@@ -16,8 +16,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardTarget;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
@@ -35,7 +37,7 @@ public class SpareBlade extends CustomCard
 
     public SpareBlade()
     {
-        super(ID, cardStrings.NAME, IMG, 2, cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, cardStrings.NAME, IMG, 1, cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     @Override
@@ -44,7 +46,7 @@ public class SpareBlade extends CustomCard
         if ( canUpgrade())
         {
             this.upgradeName();
-            this.upgradeBaseCost(1);
+            this.upgradeBaseCost(0);
         }
     }
 
@@ -52,6 +54,14 @@ public class SpareBlade extends CustomCard
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster)
     {
         addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new SpareBladePower(1)));
+        for ( AbstractCard c : abstractPlayer.hand.group)
+        {
+            if ( c.cardID == Shiv.ID )
+            {
+                c.selfRetain = true;
+                SpareBladePower.allShivs.add((Shiv)c);
+            }
+        }
     }
 
     @Override

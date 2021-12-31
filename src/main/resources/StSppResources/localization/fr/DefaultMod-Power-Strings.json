@@ -9,13 +9,13 @@
 },
 "StSpp:InLoop" :
 {
-        "NAME" : "Boucle temportel",
+        "NAME" : "Boucle temporel",
         "DESCRIPTIONS" : ["Au prochain tour ajoutez " , " cartes 'prochain tour' dans votre main"]
 },
 "StSpp:MuscleMemoryPower":
 {
         "NAME" : "Force of habit",
-        "DESCRIPTIONS" : ["A la fin du tour ajoutez une carte aleatoire non-basique joué durant ce tour ", " fois"]
+        "DESCRIPTIONS" : ["A la fin du tour copiez la derniere carte joué durant ce tour ", " fois"]
 },
 "StSpp:InhibitedPower":
 {
@@ -35,7 +35,7 @@
 "StSpp:SpareBladePower":
 {
         "NAME" : "Lame de secours",
-        "DESCRIPTIONS" : [ "Piochez une carte tous les ", " Surin joués." ]
+        "DESCRIPTIONS" : [ "Vos surins ont Retenue." ]
 },
 "StSpp:SneakPower":
 {
@@ -55,17 +55,17 @@
 "StSpp:MemoryLeakPower":
 {
         "NAME" : "Fuite memoire",
-        "DESCRIPTIONS" : ["Vos pouvoirs coute ", " de moins. Ces pouvoirs disparaitront au prochain tour : "]
+        "DESCRIPTIONS" : ["Vos pouvoirs coutent ", " de moins. Ces pouvoirs disparaitront au prochain tour : "]
 },
 "StSpp:PurifyPower":
 {
         "NAME" : "Purification",
-        "DESCRIPTIONS" : ["Quand vous entrez en Divinité , epuisez jusqu'a "," cartes Status ou Malédictions"]
+        "DESCRIPTIONS" : ["Quand vous entrez en Divinité, retirez tous vos debuffs."]
 },
 "StSpp:FaithPower":
 {
         "NAME" : "Foi",
-        "DESCRIPTIONS" : ["3 de Mantra comptent comme ", " de Force"]
+        "DESCRIPTIONS" : ["2 de Mantra comptent comme ", " de Force"]
 },
 "StSpp:VitalPointPower" :
 {

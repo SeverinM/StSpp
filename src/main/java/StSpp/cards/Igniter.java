@@ -20,7 +20,7 @@ public class Igniter extends CustomCard
     public static final String ID = DefaultMod.makeID(Igniter.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("Channeliser.png");
 
     public Igniter()
     {

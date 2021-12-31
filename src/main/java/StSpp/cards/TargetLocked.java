@@ -31,7 +31,7 @@ public class TargetLocked extends CustomCard
     public static final String ID = DefaultMod.makeID(TargetLocked.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("TargetLocked.png");
 
     public TargetLocked()
     {

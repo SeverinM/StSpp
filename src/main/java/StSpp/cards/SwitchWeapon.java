@@ -38,7 +38,7 @@ public class SwitchWeapon extends CustomCard implements PostBattleSubscriber
     public static final String ID = DefaultMod.makeID(SwitchWeapon.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("SwitchWeapon.png");
     String createdRelic = "";
 
     public SwitchWeapon()

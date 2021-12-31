@@ -24,12 +24,13 @@ public class Turnabout extends CustomCard
     public static final String ID = DefaultMod.makeID(Turnabout.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("BrushWithDeath.png");
 
     public Turnabout()
     {
         super(ID,cardStrings.NAME,IMG,1,cardStrings.DESCRIPTION,CardType.SKILL,CardColor.RED,CardRarity.RARE, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 15;
+        this.magicNumber = this.baseMagicNumber = 3;
+        this.exhaust = true;
     }
 
     @Override
@@ -38,7 +39,7 @@ public class Turnabout extends CustomCard
         if ( this.canUpgrade())
         {
             this.upgradeName();
-            this.upgradeMagicNumber(5);
+            this.upgradeMagicNumber(1);
         }
     }
 
@@ -47,30 +48,7 @@ public class Turnabout extends CustomCard
     {
         if ( abstractPlayer.currentHealth < this.magicNumber)
         {
-            addToBot(new HealAction(abstractPlayer,abstractMonster,this.magicNumber - abstractPlayer.currentHealth));
-        }
-        else
-        {
-            if ( abstractPlayer.hasPower(BetrayalPower.POWER_ID))
-            {
-                AbstractPower power = abstractPlayer.getPower(BetrayalPower.POWER_ID);
-                power.flash();
-
-                if ( power.amount > 1 )
-                {
-                    AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(abstractPlayer,abstractPlayer, BetrayalPower.POWER_ID,1));
-                }
-                else
-                {
-                    AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(abstractPlayer,abstractPlayer, BetrayalPower.POWER_ID));
-                }
-
-                AbstractDungeon.actionManager.addToBottom(new HealAction(abstractPlayer,abstractPlayer,this.magicNumber - abstractPlayer.currentHealth));
-            }
-            else
-            {
-                addToBot(new LoseHPAction(abstractPlayer,abstractPlayer, abstractPlayer.currentHealth - this.magicNumber));
-            }
+            addToBot(new HealAction(abstractPlayer,abstractPlayer,999));
         }
     }
 }

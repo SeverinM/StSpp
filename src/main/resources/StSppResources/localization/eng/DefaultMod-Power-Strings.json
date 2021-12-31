@@ -15,7 +15,7 @@
 "StSpp:MuscleMemoryPower":
 {
         "NAME" : "Force of habit",
-        "DESCRIPTIONS" : ["At the end of turn, add a copy of a random non-basic card you played this turn , ", " times."]
+        "DESCRIPTIONS" : ["At the end of turn copy the last played card ", " times."]
 },
 "StSpp:InhibitedPower":
 {
@@ -25,7 +25,7 @@
 "StSpp:DamnationPower":
 {
         "NAME" : "Damned",
-        "DESCRIPTIONS" : ["When you exhaust a card from another card, play the first one ", " times." ]
+        "DESCRIPTIONS" : ["Whenyou exhaust a card from another card, play the first one ", " times." ]
 },
 "StSpp:BetrayalPower":
 {
@@ -40,7 +40,7 @@
 "StSpp:SpareBladePower":
 {
         "NAME" : "Spare blade",
-        "DESCRIPTIONS" : [ "Draw ", " cards for every 6 Shiv played." ]
+        "DESCRIPTIONS" : [ "Your shivs have Retain." ]
 },
 "StSpp:SneakPower":
 {
@@ -65,7 +65,7 @@
 "StSpp:PurifyPower":
 {
         "NAME" : "Purify",
-        "DESCRIPTIONS" : ["Whenever you enter in divinity stance exhaust up to "," Curses and Status cards."]
+        "DESCRIPTIONS" : ["Whenever you enter in divinity stance, remove all your debuffs."]
 },
 "StSpp:FaithPower":
 {

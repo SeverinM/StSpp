@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import StSpp.DefaultMod;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -27,7 +28,7 @@ public class Resilience extends CustomCard
     public static final String ID = DefaultMod.makeID(Resilience.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Resilience.png");
 
     public Resilience( )
     {
@@ -55,18 +56,19 @@ public class Resilience extends CustomCard
         AbstractPower p;
 
         Iterator var2 = AbstractDungeon.player.powers.iterator();
+        boolean found = false;
         while (var2.hasNext())
         {
             p = (AbstractPower)var2.next();
 
-            //Not affected by weak
-            if ( ( p.ID == WeakPower.POWER_ID || p.ID == VulnerablePower.POWER_ID ) && p.amount > 0)
+            if ( p.type == AbstractPower.PowerType.DEBUFF && p.amount > 0 && !found)
             {
                 tmp *= this.baseMagicNumber;
-                continue;
+                found = true;
             }
 
-            tmp = p.atDamageGive(tmp,this.damageTypeForTurn, this);
+            if ( p.ID != WeakPower.POWER_ID )
+                tmp = p.atDamageGive(tmp,this.damageTypeForTurn, this);
         }
 
         tmp = player.stance.atDamageGive(tmp, this.damageTypeForTurn, this);
@@ -97,7 +99,7 @@ public class Resilience extends CustomCard
 
         while(var1.hasNext()) {
             AbstractPower p = (AbstractPower)var1.next();
-            if (p.ID == "Weakened" && p.amount > 0) {
+            if (p.type == AbstractPower.PowerType.DEBUFF && p.amount > 0) {
                 this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
             }

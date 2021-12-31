@@ -19,7 +19,6 @@ import static StSpp.DefaultMod.makeRelicPath;
 public class SailingBoat extends CustomRelic
 {
     public static final String ID = DefaultMod.makeID("SailingBoat");
-    public static int CHANCE_UPGRADE = 10;
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SailingBoat.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SailingBoatOutline.png"));
 

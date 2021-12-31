@@ -66,7 +66,6 @@ public class Landslide extends CustomCard
         for( AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters)
         {
             addToBot(new DamageAction(m,new DamageInfo(abstractPlayer, this.damage), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-            addToBot(new GainBlockAction(m, this.magicNumber));
         }
 
         addToBot(new DamageAction(abstractPlayer,new DamageInfo(abstractPlayer, this.damage), AbstractGameAction.AttackEffect.BLUNT_HEAVY));

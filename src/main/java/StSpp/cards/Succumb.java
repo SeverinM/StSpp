@@ -58,21 +58,16 @@ public class Succumb extends CustomCard
 
         Iterator var2 = abstractPlayer.drawPile.group.iterator();
 
-        int cardOrStatusCount = this.magicNumber;
+        int curseOrStatusCount = this.magicNumber;
         AbstractCard card;
         while(var2.hasNext() && this.magicNumber > 0) {
             card = (AbstractCard)var2.next();
             if (card.type == CardType.CURSE || card.type == CardType.STATUS ) {
-                cardOrStatusCount--;
+                curseOrStatusCount--;
             }
         }
 
         this.addToBot(new MultiDrawPileToHandAction(this.magicNumber, typeToFetch));
-
-        if ( cardOrStatusCount > 0)
-        {
-            addToBot(new DrawCardAction(cardOrStatusCount));
-        }
     }
 
     @Override

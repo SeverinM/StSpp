@@ -1,6 +1,7 @@
 package StSpp.cards;
 
 import StSpp.actions.BladeOfBloodAction;
+import StSpp.actions.DiveAction;
 import StSpp.relics.XCola;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -49,7 +50,6 @@ public class Dive extends CustomCard
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster)
     {
-        int effect = EnergyPanel.totalCount;
-        this.addToBot(new DrawCardAction(effect - this.cost));
+        this.addToBot(new DiveAction());
     }
 }

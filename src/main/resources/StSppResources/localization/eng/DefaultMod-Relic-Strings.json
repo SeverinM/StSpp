@@ -41,7 +41,7 @@
   {
     "NAME" :"Cosmic Egg",
     "FLAVOR" : "A whole universe in your hand",
-    "DESCRIPTIONS" : [ "When you draw a card you have #b10% #bof #bchance this card is upgraded for the rest of the fight." ]
+    "DESCRIPTIONS" : [ "Whenever you draw a card you have #b10% #bof #bchance this card is upgraded for the rest of the fight." ]
   },
   "StSpp:BrokenTotem":
   {
@@ -113,7 +113,7 @@
   {
     "NAME" : "Crystal Ball",
     "FLAVOR" : "If you look through this ball you can see all your past and all your potential futures ",
-    "DESCRIPTIONS" : ["Upon picking, add to your deck all rare cards."]
+    "DESCRIPTIONS" : ["Upon picking add to your deck all rare cards, they cost 1 less."]
   },
   "StSpp:WoodenPendulum":
   {
@@ -125,7 +125,7 @@
   {
     "NAME" : "Bow",
     "FLAVOR" : "A basic weapon , but can become a deadly weapon if well used",
-    "DESCRIPTIONS" : ["Whenever you play a basic strike or a basic defend ,gain +1 damage / block for the fight."]
+    "DESCRIPTIONS" : ["Each turn, the first basic card is played twice."]
   },
   "StSpp:FireArrow" :
   {
@@ -155,6 +155,18 @@
   {
     "NAME" : "Monolith",
     "FLAVOR" : "It's perfectly flat",
-    "DESCRIPTIONS" : ["At the start a of the turn , draw a card as long as you don't play a Power card."]
+    "DESCRIPTIONS" : ["At the start a of the turn , draw a card as long as you did not play a Power card during this fight."]
+  },
+  "StSpp:Metronome" :
+  {
+    "NAME" : "Métronome",
+    "FLAVOR" : "A perfect rythm",
+    "DESCRIPTIONS" : ["Gain [E] during odd turns, lose [E] during even turns."]
+  },
+  "StSpp:BrokenLock" :
+  {
+    "NAME" : "Broken lock",
+    "FLAVOR" : "What's more exciting than defying the forbidden ?",
+    "DESCRIPTIONS" : ["Your cards no longer require extra conditions to be played."]
   }
 }

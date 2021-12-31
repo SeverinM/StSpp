@@ -40,4 +40,30 @@ public class ShivPatch
             }
         }
     }*/
+
+    @SpirePatch(clz=Shiv.class, method = SpirePatch.CONSTRUCTOR)
+    public static class ShivCreatePatch
+    {
+        public static void Postfix(Shiv s)
+        {
+            if ( AbstractDungeon.player != null && AbstractDungeon.player.hasPower(SpareBladePower.POWER_ID ) )
+            {
+                s.selfRetain = true;
+                SpareBladePower.allShivs.add(s);
+            }
+        }
+    }
+
+    @SpirePatch(clz=AbstractCard.class, method = "triggerWhenDrawn")
+    public static class ShivDrawPatch
+    {
+        public static void Postfix(AbstractCard c)
+        {
+            if ( c.cardID == Shiv.ID && AbstractDungeon.player.hasPower(SpareBladePower.POWER_ID))
+            {
+                c.selfRetain = true;
+                SpareBladePower.allShivs.add((Shiv)c);
+            }
+        }
+    }
 }

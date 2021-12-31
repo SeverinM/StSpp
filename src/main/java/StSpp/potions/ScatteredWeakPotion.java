@@ -80,7 +80,7 @@ public class ScatteredWeakPotion extends CustomPotion implements CustomSavable<I
     @Override
     public void use(AbstractCreature abstractCreature) {
         this.addToBot(new ApplyPowerAction(abstractCreature, AbstractDungeon.player,
-                new WeakPower(AbstractDungeon.player,this.potency,false)));
+                new WeakPower(abstractCreature,1,false), 1));
         if ( usageLeft > 1 )
         {
             addToBot(new ObtainPotionAction(new ScatteredWeakPotion(usageLeft - 1)));

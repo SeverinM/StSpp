@@ -2,12 +2,12 @@
   "StSpp:MinorTwinStrike" :
   {
     "NAME" : "Minor Twin Strike",
-    "DESCRIPTION" : "Deal !D! damage twice. NL Draw a card."
+    "DESCRIPTION" : "Deal !D! damage three times."
   },
   "StSpp:BladeOfBlood" :
   {
     "NAME" : "Sword Of Blood",
-    "DESCRIPTION" : "Lose half of your HP. NL Deal as many damage as your missing health. NL Exhaust."
+    "DESCRIPTION" : "Lose half of your HP. NL Deal as many damage as your missing HP ( !M! ). NL Exhaust."
   },
   "StSpp:CounterStrike" :
   {
@@ -22,14 +22,14 @@
   "StSpp:Unbreakable" :
   {
     "NAME" : "Unbreakable",
-    "DESCRIPTION" : "Gain !B! Block. NL Double efficiency if Frail or Vulnerable.",
-    "UPGRADE_DESCRIPTION" : "Gain !B! block. NL Triple efficiency if Frail or Vulnerable."
+    "DESCRIPTION" : "Gain !B! Block. NL Double efficiency if you have one debuff or more.",
+    "UPGRADE_DESCRIPTION" : "Gain !B! Block. NL Triple efficiency if you have one debuff or more."
   },
   "StSpp:Resilience" :
   {
     "NAME" : "Resilience",
-    "DESCRIPTION" : "Deal !D! damage. NL Double efficiency if Weak or Vulnerable.",
-    "UPGRADE_DESCRIPTION" : "Deal !D! damage. NL Triple efficiency if Weak or Vulnerable."
+    "DESCRIPTION" : "Deal !D! damage. NL Double efficiency if you have at least one debuff.",
+    "UPGRADE_DESCRIPTION" : "Deal !D! damage. NL Triple efficiency if you have at least one debuff."
   },
   "StSpp:TimeParadox" :
   {
@@ -45,8 +45,8 @@
   "StSpp:Sprint" :
   {
     "NAME" : "Sprint",
-    "DESCRIPTION" : "Gain [E]. NL You cannot use attack card until the end of the turn.",
-    "UPGRADE_DESCRIPTION" : "Gain [E] [E]. NL You cannot use attack card until the end of the turn."
+    "DESCRIPTION" : "Gain [E] [E]. NL You cannot use attack card until the end of the turn.",
+    "UPGRADE_DESCRIPTION" : "Gain [E] [E] and draw a card. NL You cannot use attack card until the end of the turn."
   },
   "StSpp:Saturation" :
   {
@@ -58,18 +58,18 @@
   },
   "StSpp:TargetLocked" :
   {
-    "NAME" : "Target Locked",
+    "NAME" : "Calibrate",
     "DESCRIPTION" : "Apply 99 Lock-On. NL Exhaust."
   },
   "StSpp:MuscleMemory" :
   {
     "NAME" : "Muscle Memory",
-    "DESCRIPTION" : "At the end of turn add a random copy of a non-basic card you played this turn into the draw pile."
+    "DESCRIPTION" : "At the end of the turn copy the last played card ( except this one ) into the draw pile."
   },
   "StSpp:Dive" :
   {
     "NAME" : "Dive",
-    "DESCRIPTION" : "Draw as many cards as [E] you currently have."
+    "DESCRIPTION" : "Pick a card of your hand. NL Draw as many cards as its cost."
   },
   "StSpp:Jab" :
   {
@@ -89,9 +89,8 @@
   },
   "StSpp:Vengeance":
   {
-    "NAME" : "Vengeance",
-    "DESCRIPTION" : "Playable only if all your other cards are Curse or Status. NL Add a bludgeon that cost 0.",
-    "UPGRADE_DESCRIPTION" : "Playable only if all your other cards are Curses or Status. NL Add a bludgeon+ that cost 0."
+    "NAME" : "Embrace",
+    "DESCRIPTION" : "Gain [E] for each Curse or Status cards in your hand."
   },
   "StSpp:Damnation":
   {
@@ -141,7 +140,7 @@
   "StSpp:Succumb" :
   {
     "NAME" : "Succumb",
-    "DESCRIPTION" : "Draw !M! cards ( Curse and Status cards first )."
+    "DESCRIPTION" : "Draw !M! Curse or Status cards."
   },
   "StSpp:SwitchWeapon" :
   {
@@ -165,7 +164,7 @@
   },
   "StSpp:PoisonousPunch":
   {
-    "NAME" : "Infection",
+    "NAME" : "Toxic crossbow",
     "DESCRIPTION" : "Deal !D! damages. NL If this card is your rightmost in hand apply !D! Poison."
   },
   "StSpp:NonchalentStrike":
@@ -197,8 +196,8 @@
   },
   "StSpp:Turnabout":
   {
-    "NAME" : "Turnabout",
-    "DESCRIPTION" : "Set your HP to !M! ."
+    "NAME" : "Brush With Death",
+    "DESCRIPTION" : "If you have !M! HP or less, fully heal you. NL Exhaust"
   },
   "StSpp:AbandonFlesh":
   {
@@ -214,7 +213,7 @@
   "StSpp:SpareBlade":
   {
     "NAME" : "Spare blade",
-    "DESCRIPTION" : "Draw a card every 6 Shiv played."
+    "DESCRIPTION" : "Your shivs have Retain."
   },
   "StSpp:Pointer":
   {
@@ -229,12 +228,12 @@
   "StSpp:TheBiggerTheyAre":
   {
     "NAME" : "The bigger they are...",
-    "DESCRIPTION" : "Deal !D! damages. NL Deal the same amount if enemy has more HP than you."
+    "DESCRIPTION" : "Deal !D! damages. NL Gain 1 Strength if enemy has more HP than you."
   },
   "StSpp:Landslide":
   {
     "NAME" : "Landslide",
-    "DESCRIPTION" : "EVERYONE take !D! damage then gain !M! Block."
+    "DESCRIPTION" : "EVERYONE take !D! damage then you gain !M! Block."
   },
   "StSpp:Igniter" :
   {
@@ -254,8 +253,8 @@
   },
   "StSpp:TimeDodge" :
   {
-    "NAME" : "Timed Dodge",
-    "DESCRIPTION" : "Playable only during even turns. NL Gain !M! Block. NL Retain."
+    "NAME" : "Prediction",
+    "DESCRIPTION" : "Playable only during even turns. NL Gain !M! Block and Draw a card. NL Retain."
   },
   "StSpp:Chanting" :
   {
@@ -280,7 +279,7 @@
   "StSpp:Purify":
   {
     "NAME" : "Purify",
-    "DESCRIPTION" : "Whenever you enter in Divinity Stance, exhaust up to !M! curses or status cards."
+    "DESCRIPTION" : "Whenever you enter in Divinity Stance, remove all your debuffs."
   },
   "StSpp:Faith":
   {
@@ -297,5 +296,41 @@
     "NAME" : "Patience",
     "DESCRIPTION" : "Unplayable before turn 5 ( !M! ). NL Gain [E] and draw a card.",
     "UPGRADE_DESCRIPTION" : "Unplayable before turn 5 ( !M! ). NL Gain [E] and draw 2 cards."
+  },
+  "StSpp:Obliterate" :
+  {
+    "NAME" : "Obliterate",
+    "DESCRIPTION" : "Exhaust a card of your hand. NL Remove it from your deck. NL Exhaust",
+    "UPGRADE_DESCRIPTION" : "Exhaust up to two of your hand. NL Remove them from your deck. NL Exhaust"
+  },
+  "StSpp:Empathy":
+  {
+    "NAME" : "Empathy",
+    "DESCRIPTION" : "During this turn, Block gained reduce Strength of a random enemy during this turn instead.",
+    "UPGRADE_DESCRIPTION" : "During this turn, Block gained reduce Strength of ALL enemies during this turn instead."
+  },
+  "StSpp:Seed":
+  {
+    "NAME" : "Seed",
+    "DESCRIPTION" : "Unplayable. NL Whenever this card is removed from your deck gain a random relic.",
+    "UPGRADE_DESCRIPTION" : "Unplayable. NL Whenever this card is removed from your deck gain a random rare relic."
+  },
+  "StSpp:Repulse":
+  {
+    "NAME" : "Repulse",
+    "DESCRIPTION" : "Add a Remembrance with your current Stance into the draw pile. NL Exit your current Stance."
+  },
+  "StSpp:Remembrance":
+  {
+    "NAME" : "Remembrance",
+    "EXTENDED_DESCRIPTION":
+    [
+      "Retain",
+      "Exit your Stance. NL Exhaust",
+      "Enter Wrath. NL Exhaust",
+      "Enter Calm. NL Exhaust",
+      "Enter Divinity. NL Exhaust",
+      "Enter ????. NL Exhaust"
+    ]
   }
 }

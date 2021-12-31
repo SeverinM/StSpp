@@ -28,7 +28,7 @@ public class MindBarrier extends CustomCard implements OnStartBattleSubscriber
     public static final String ID = DefaultMod.makeID(MindBarrier.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("MindBarrier.png");
     public static HashSet<String> differentCards = new HashSet<>();
 
     public MindBarrier()

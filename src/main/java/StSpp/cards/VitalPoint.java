@@ -23,7 +23,7 @@ public class VitalPoint extends CustomCard
 {
     public static final String ID = DefaultMod.makeID(VitalPoint.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Exaltation.png");
 
     public VitalPoint()
     {

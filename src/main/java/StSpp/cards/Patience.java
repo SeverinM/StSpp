@@ -21,7 +21,7 @@ public class Patience extends CustomCard
     public static final String ID = DefaultMod.makeID(Patience.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Patience.png");
     public static final int TURN_LIMIT = 5;
 
     public Patience()

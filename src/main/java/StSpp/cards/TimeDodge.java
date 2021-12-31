@@ -22,7 +22,7 @@ public class TimeDodge extends CustomCard
 {
     public static final String ID = DefaultMod.makeID(TimeDodge.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("TimedDodge.png");
     int turnCount = 0;
 
     public TimeDodge()
@@ -51,6 +51,7 @@ public class TimeDodge extends CustomCard
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster)
     {
         addToBot(new GainBlockAction(abstractPlayer,this.magicNumber));
+        addToBot(new DrawCardAction(1));
     }
 
     @Override

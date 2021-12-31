@@ -1,13 +1,13 @@
 {
   "StSpp:MinorTwinStrike" :
   {
-    "NAME" : "Double frappe mineur",
-    "DESCRIPTION" : "Infligez !D! dégâts deux fois. NL Piochez une carte."
+    "NAME" : "Triple frappe mineur",
+    "DESCRIPTION" : "Infligez !D! dégâts trois fois."
   },
   "StSpp:BladeOfBlood" :
   {
     "NAME" : "Lame de sang",
-    "DESCRIPTION" : "Perdez la moitié de vos PV. NL Infligez autant de dégâts que vos PV manquant. NL Épuisement."
+    "DESCRIPTION" : "Perdez la moitié de vos PV. NL Infligez autant de dégâts que vos PV manquant ( !M! ). NL Épuisement."
   },
   "StSpp:CounterStrike" :
   {
@@ -22,14 +22,14 @@
   "StSpp:Unbreakable" :
   {
     "NAME" : "Incassable",
-    "DESCRIPTION" : "Gagnez !B! d'Armure. NL Gagnez le double si vous êtes Fragile.",
-    "UPGRADE_DESCRIPTION" : "Gagnez !B! d'Armure. NL Gagnez le triple si vous êtes Fragile."
+    "DESCRIPTION" : "Gagnez !B! d'Armure. NL Gagnez le double si vous avez au moins un debuff",
+    "UPGRADE_DESCRIPTION" : "Gagnez !B! d'Armure. NL Gagnez le triple si vous avez au moins un debuff."
   },
   "StSpp:Resilience" :
   {
     "NAME" : "Obstination",
-    "DESCRIPTION" : "Infligez !D! dégâts. NL Doublez les dégâts si vous êtes Affaibli.",
-    "UPGRADE_DESCRIPTION" : "Infligez !D! dégâts. NL Triplez les dégâts si vous êtes Affaibli."
+    "DESCRIPTION" : "Infligez !D! dégâts. NL Doublez les dégâts si vous avez au moins un debuff.",
+    "UPGRADE_DESCRIPTION" : "Infligez !D! dégâts. NL Triplez les dégâts si vous avez au moins un debuff."
   },
   "StSpp:TimeParadox" :
   {
@@ -45,8 +45,8 @@
   "StSpp:Sprint" :
   {
     "NAME" : "Sprint",
-    "DESCRIPTION" : "Gagnez [E]. NL Vous ne pouvez plus attaquer jusqu'a la fin du tour.",
-    "UPGRADE_DESCRIPTION" : "Gagnez [E] [E]. NL Vous ne pouvez plus attaquer jusqu'a la fin du tour."
+    "DESCRIPTION" : "Gagnez [E] [E]. NL Vous ne pouvez plus attaquer jusqu'a la fin du tour.",
+    "UPGRADE_DESCRIPTION" : "Gagnez [E] [E] et piochez une carte. NL Vous ne pouvez plus attaquer jusqu'a la fin du tour."
   },
   "StSpp:Saturation" :
   {
@@ -58,18 +58,18 @@
   },
   "StSpp:TargetLocked" :
   {
-    "NAME" : "Cible verrouillé",
+    "NAME" : "Calibrage",
     "DESCRIPTION" : "Appliquez 99 de Ciblage. NL Épuisement."
   },
   "StSpp:MuscleMemory" :
   {
     "NAME" : "Memoire musculaire",
-    "DESCRIPTION" : "A la fin de votre tour copiez une carte non-basique dans votre pioche joué durant ce tour."
+    "DESCRIPTION" : "A la fin de votre tour copiez la derniere carte jouée ( sauf celle-ci ) dans votre pioche."
   },
   "StSpp:Dive" :
   {
     "NAME" : "Plongeon",
-    "DESCRIPTION" : "Piochez autant de cartes que vous avez de [E] ."
+    "DESCRIPTION" : "Choisissez une carte de votre main. NL Piochez autant de carte que son coût."
   },
   "StSpp:Jab" :
   {
@@ -85,13 +85,12 @@
   "StSpp:IntoTheAbyss" :
   {
     "NAME" : "Vers les abysses",
-    "DESCRIPTION" : "Epuisez votre pioche. NL Épuisement"
+    "DESCRIPTION" : "Épuisez votre pioche. NL Épuisement"
   },
   "StSpp:Vengeance":
   {
-    "NAME" : "Vengeance",
-    "DESCRIPTION" : "Jouable que si vos autres cartes sont des Maledictions ou Status. NL Ajoutez un gourdin qui coute 0.",
-    "UPGRADE_DESCRIPTION" : "Jouable que si vos autres cartes sont des Maledictions ou Status. NL Ajoutez un gourdin+ qui coute 0."
+    "NAME" : "Acceptation",
+    "DESCRIPTION" : "Gagnez [E] pour chaque carte Malédiction ou Status dans votre main."
   },
   "StSpp:Damnation":
   {
@@ -141,7 +140,7 @@
   "StSpp:Succumb" :
   {
     "NAME" : "Succomber",
-    "DESCRIPTION" : "Piochez !M! cartes ( Malédictions et Status en priorité )."
+    "DESCRIPTION" : "Piochez !M! cartes Malédiction ou Status."
   },
   "StSpp:SwitchWeapon" :
   {
@@ -165,8 +164,8 @@
   },
   "StSpp:PoisonousPunch":
   {
-    "NAME" : "Infection",
-    "DESCRIPTION" : "Infligez !D! dégâts. NL s'il s'agit de votre carte la plus a droite de votre main appliquez !D! Poison."
+    "NAME" : "Arbalete toxique",
+    "DESCRIPTION" : "Infligez !D! dégâts. NL S'il s'agit de votre carte la plus a droite de votre main appliquez !D! Poison."
   },
   "StSpp:NonchalentStrike":
   {
@@ -197,13 +196,13 @@
   },
   "StSpp:Turnabout":
   {
-    "NAME" : "Volte-face",
-    "DESCRIPTION" : "Fixez vos PV à !M!."
+    "NAME" : "Frôler la mort",
+    "DESCRIPTION" : "Si vous avez !M! PV ou moins regagnez tout vos PV. NL Épuisement."
   },
   "StSpp:AbandonFlesh":
   {
     "NAME" : "Abandonner la chair",
-    "DESCRIPTION" : "Gagnez 1 Intangible au prochain tour. NL Epuisement."
+    "DESCRIPTION" : "Gagnez 1 Intangible au prochain tour. NL Épuisement."
   },
   "StSpp:MindBarrier":
   {
@@ -214,7 +213,7 @@
   "StSpp:SpareBlade":
   {
     "NAME" : "Lame de secours",
-    "DESCRIPTION" : "Tous les 6 Surin joués piochez une carte."
+    "DESCRIPTION" : "Vos Surins ont Retenue."
   },
   "StSpp:Pointer":
   {
@@ -229,12 +228,12 @@
   "StSpp:TheBiggerTheyAre":
   {
     "NAME" : "Plus ils sont grands...",
-    "DESCRIPTION" : "Infligez !D! dégats. NL Infligez les même dégâts si la cible a plus de PV que vous."
+    "DESCRIPTION" : "Infligez !D! dégats. NL Gagnez 1 de Force si la cible a plus de PV que vous."
   },
   "StSpp:Landslide":
   {
     "NAME" : "Eboulement",
-    "DESCRIPTION" : "Prenez TOUS !D! dégats puis gagnez !M! d'Armure."
+    "DESCRIPTION" : "Vous subissez TOUS !D! dégats puis vous gagnez !M! d'Armure."
   },
   "StSpp:Igniter" :
   {
@@ -254,8 +253,8 @@
   },
   "StSpp:TimeDodge" :
   {
-    "NAME" : "Esquive timé",
-    "DESCRIPTION" : "Jouable que durant les tours pairs. NL Gagnez !M! d'Armure. NL Retenue."
+    "NAME" : "Prédiction",
+    "DESCRIPTION" : "Jouable que durant les tours pairs. NL Gagnez !M! d'Armure et Piochez une carte. NL Retenue."
   },
   "StSpp:Chanting" :
   {
@@ -280,7 +279,7 @@
   "StSpp:Purify":
   {
     "NAME" : "Purification",
-    "DESCRIPTION" : "Quand vous entrez en divinité , epuisez jusqu'a !M! cartes Status ou Malédictions."
+    "DESCRIPTION" : "Quand vous entrez en divinité , retirez tous vos debuffs."
   },
   "StSpp:Faith":
   {
@@ -297,5 +296,41 @@
     "NAME" : "Patience",
     "DESCRIPTION" : "Injouable avant le tour 5 ( !M! ). NL Gagnez [E] et piochez une carte.",
     "UPGRADE_DESCRIPTION" : "Injouable avant le tour 5 ( !M! ). NL Gagnez [E] et piochez 2 cartes."
+  },
+  "StSpp:Obliterate":
+  {
+    "NAME" : "Obliteration",
+    "DESCRIPTION" : "Epuisez une carte de votre main. NL Retirez la de votre deck. NL Épuisement.",
+    "UPGRADE_DESCRIPTION" : "Epuisez jusqu'a 2 cartes de votre main. NL Retirez les de votre deck. NL Épuisement."
+  },
+  "StSpp:Empathy":
+  {
+    "NAME" : "Empathie",
+    "DESCRIPTION" : "Durant ce tour, l'Armure gagné reduit la force d'un ennemie aléatoire pour ce tour à la place.",
+    "UPGRADE_DESCRIPTION" : "Durant ce tour, l'Armure gagné reduit la force de TOUS les ennemies pour ce tour à la place."
+  },
+  "StSpp:Seed":
+  {
+    "NAME" : "Graine",
+    "DESCRIPTION" : "Injouable. NL Si cette carte est retirée de votre deck gagnez une relique aléatoire.",
+    "UPGRADE_DESCRIPTION" : "Injouable. NL Si cette carte est retirée de votre deck gagnez une relique aléatoire rare."
+  },
+  "StSpp:Repulse":
+  {
+    "NAME" : "Refouler",
+    "DESCRIPTION" : "Creer un Souvenir avec votre posture actuelle et placez la dans votre pioche. NL Quittez votre posture."
+  },
+  "StSpp:Remembrance":
+  {
+    "NAME" : "Souvenir",
+    "EXTENDED_DESCRIPTION":
+    [
+      "Retenue",
+      "Quittez votre posture. NL Épuisement.",
+      "Entrez en Colère. NL Épuisement.",
+      "Entrez en Calme. NL Épuisement.",
+      "Entrez en Divinité. NL Épuisement.",
+      "Entrez en ????. NL Épuisement."
+    ]
   }
 }

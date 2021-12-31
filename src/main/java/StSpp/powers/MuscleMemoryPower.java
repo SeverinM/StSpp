@@ -57,18 +57,21 @@ public class MuscleMemoryPower extends AbstractPower
         if ( cards.size() == 0 || !isPlayer )
             return;
 
-        for (int i = 0; i < this.amount;i++)
+        AbstractCard chosen = null;
+        for (int i = cards.size() - 1 ; i >= 0; i--)
         {
-            int startIndex = new Random().nextInt(cards.size());
-            int index = startIndex;
-            AbstractCard chosen = null;
-            do
+            if ( cards.get(i).cardID == MuscleMemory.ID )
             {
-                chosen = cards.get(index);
-                index = (index + 1 ) % cards.size();
-            } while( ( chosen.cardID == MuscleMemory.ID || chosen.rarity == AbstractCard.CardRarity.BASIC || chosen.type == AbstractCard.CardType.STATUS ) && index != startIndex );
+                continue;
+            }
 
-            if ( chosen.cardID != MuscleMemory.ID && chosen.rarity != AbstractCard.CardRarity.BASIC)
+            chosen = cards.get(i);
+            break;
+        }
+
+        if ( chosen != null )
+        {
+            for (int i = 0; i < this.amount; i++)
             {
                 addToBot( new MakeTempCardInDrawPileAction(chosen.makeStatEquivalentCopy(), 1, true, true));
             }
@@ -76,7 +79,8 @@ public class MuscleMemoryPower extends AbstractPower
     }
 
     @Override
-    public void updateDescription() {
+    public void updateDescription()
+    {
         description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 }

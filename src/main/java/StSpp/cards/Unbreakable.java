@@ -23,18 +23,18 @@ public class Unbreakable extends CustomCard
     public static final String ID = DefaultMod.makeID(Unbreakable.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Unbreakable.png");
 
     public Unbreakable()
     {
         super(ID, cardStrings.NAME, IMG, 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.magicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.baseBlock = 6;
     }
 
     @Override
     public void upgrade() {
-        if ( !canUpgrade())
+        if ( canUpgrade())
         {
             this.upgradeName();
             this.upgradeMagicNumber(1);
@@ -46,6 +46,7 @@ public class Unbreakable extends CustomCard
     @Override
     public void applyPowersToBlock()
     {
+        boolean found = false;
         this.isBlockModified = false;
         float tmp = (float)this.baseBlock;
 
@@ -56,13 +57,14 @@ public class Unbreakable extends CustomCard
             p = (AbstractPower)var2.next();
 
             //Not affected by frail
-            if ( ( p.ID == FrailPower.POWER_ID || p.ID == VulnerablePower.POWER_ID ) && p.amount > 0)
+            if ( p.type == AbstractPower.PowerType.DEBUFF && p.amount > 0 && !found )
             {
-                tmp *= this.magicNumber;
-                continue;
+                found = true;
+                tmp *= this.baseMagicNumber;
             }
 
-            tmp = p.modifyBlock(tmp, this);
+            if ( p.ID != FrailPower.POWER_ID )
+                tmp = p.modifyBlock(tmp, this);
         }
 
         if (this.baseBlock != MathUtils.floor(tmp)) {
@@ -83,7 +85,7 @@ public class Unbreakable extends CustomCard
 
         while(var1.hasNext()) {
             AbstractPower p = (AbstractPower)var1.next();
-            if (p.ID == "Frail" && p.amount > 0) {
+            if (p.type == AbstractPower.PowerType.DEBUFF && p.amount > 0) {
                 this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
             }

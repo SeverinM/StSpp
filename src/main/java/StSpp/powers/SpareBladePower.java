@@ -3,6 +3,8 @@ package StSpp.powers;
 import StSpp.CustomTags;
 import StSpp.cards.MuscleMemory;
 import basemod.devcommands.draw.Draw;
+import basemod.interfaces.OnStartBattleSubscriber;
+import basemod.interfaces.PostBattleSubscriber;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
@@ -19,12 +21,13 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import StSpp.DefaultMod;
 import StSpp.util.TextureLoader;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import java.util.Random;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class SpareBladePower extends AbstractPower
+public class SpareBladePower extends AbstractPower implements PostBattleSubscriber, OnStartBattleSubscriber
 {
     public static final String POWER_ID = DefaultMod.makeID("SpareBladePower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -36,10 +39,13 @@ public class SpareBladePower extends AbstractPower
     private static final Texture tex84 = TextureLoader.getTexture("StSppResources/images/powers/placeholder_power84.png");
     private static final Texture tex32 = TextureLoader.getTexture("StSppResources/images/powers/placeholder_power32.png");
 
+    public static ArrayList<Shiv> allShivs = new ArrayList<>();
+
     int draw = 0;
 
     public SpareBladePower(int amount)
     {
+        allShivs.clear();
         draw = amount;
         name = NAME;
         ID = POWER_ID;
@@ -72,14 +78,45 @@ public class SpareBladePower extends AbstractPower
         this.updateDescription();
     }
 
-    public void stackPower(int stackAmount) {
+    public void OnExhaust(AbstractCard c)
+    {
+        if ( c.cardID == Shiv.ID && allShivs.contains(c))
+        {
+            allShivs.remove(c);
+        }
+    }
+
+    void OnRemove()
+    {
+        for (Shiv s : allShivs)
+        {
+            if ( s != null )
+                s.retain = false;
+        }
+        allShivs.clear();
+    }
+
+    public void stackPower(int stackAmount)
+    {
         this.fontScale = 8.0F;
         draw++;
         this.updateDescription();
     }
 
     @Override
+    public void receivePostBattle(AbstractRoom var1)
+    {
+        allShivs.clear();
+    }
+
+    @Override
+    public void receiveOnBattleStart(AbstractRoom var1)
+    {
+        allShivs.clear();
+    }
+
+    @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + draw + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0];
     }
 }

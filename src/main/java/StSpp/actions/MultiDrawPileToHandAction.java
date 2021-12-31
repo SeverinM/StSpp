@@ -1,5 +1,8 @@
 package StSpp.actions;
 
+import basemod.BaseMod;
+import basemod.interfaces.PostDrawSubscriber;
+import basemod.patches.com.megacrit.cardcrawl.characters.AbstractPlayer.PostDrawHook;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -10,10 +13,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.EvolvePower;
 import com.megacrit.cardcrawl.powers.FireBreathingPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import java.util.ArrayList;
+import java.util.EventListener;
 import java.util.Iterator;
 
 public class MultiDrawPileToHandAction extends AbstractGameAction
@@ -72,23 +78,23 @@ public class MultiDrawPileToHandAction extends AbstractGameAction
                         AbstractDungeon.player.hand.addToTop(card);
                         AbstractDungeon.player.hand.refreshHandLayout();
                         AbstractDungeon.player.hand.applyPowers();
+                        AbstractDungeon.player.applyStartOfTurnOrbs();
 
-                        if ( card.type == AbstractCard.CardType.CURSE || card.type == AbstractCard.CardType.STATUS)
-                        {
-                            if ( AbstractDungeon.player.hasPower(FireBreathingPower.POWER_ID))
-                            {
-                                FireBreathingPower p = (FireBreathingPower)AbstractDungeon.player.getPower(FireBreathingPower.POWER_ID);
-                                p.flash();
-                                this.addToBot(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(p.amount, true), DamageInfo.DamageType.THORNS, AttackEffect.FIRE, true));
-                            }
+                        Iterator var1 = AbstractDungeon.player.powers.iterator();
 
-                            if ( AbstractDungeon.player.hasPower(EvolvePower.POWER_ID))
-                            {
-                                EvolvePower p = (EvolvePower) AbstractDungeon.player.getPower(EvolvePower.POWER_ID);
-                                p.flash();
-                                this.addToBot(new DrawCardAction(p.amount));
-                            }
+                        while(var1.hasNext()) {
+                            AbstractPower p = (AbstractPower)var1.next();
+                            p.onCardDraw(card);
                         }
+
+                        var1 = AbstractDungeon.player.relics.iterator();
+
+                        while(var1.hasNext()) {
+                            AbstractRelic r = (AbstractRelic)var1.next();
+                            r.onDrawOrDiscard();
+                        }
+
+                        card.triggerWhenDrawn();
                     }
                 }
             }

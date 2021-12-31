@@ -27,7 +27,7 @@ public class FiercePoison extends CustomCard
 
     public FiercePoison()
     {
-        super(ID,cardStrings.NAME,IMG,2,cardStrings.DESCRIPTION,CardType.SKILL,CardColor.GREEN,CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID,cardStrings.NAME,IMG,1,cardStrings.DESCRIPTION,CardType.SKILL,CardColor.GREEN,CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
     }

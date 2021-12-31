@@ -9,8 +9,10 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.unique.ExpertiseAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import StSpp.DefaultMod;
@@ -35,16 +37,33 @@ public class WoodenStick extends CustomRelic
         return this.DESCRIPTIONS[0];
     }
 
-    @Override
-    public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction)
+    boolean activated = true;
+
+    public void onUseCard(AbstractCard card, UseCardAction action)
     {
-        if ( targetCard.hasTag(AbstractCard.CardTags.STARTER_DEFEND))
-        {
-            targetCard.baseBlock++;
+        if (card.rarity == AbstractCard.CardRarity.BASIC && this.activated) {
+            this.activated = false;
+            this.flash();
+            AbstractMonster m = null;
+            if (action.target != null) {
+                m = (AbstractMonster)action.target;
+            }
+
+            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            AbstractCard tmp = card.makeSameInstanceOf();
+            tmp.current_x = card.current_x;
+            tmp.current_y = card.current_y;
+            tmp.target_x = (float)Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+            tmp.target_y = (float)Settings.HEIGHT / 2.0F;
+            tmp.applyPowers();
+            tmp.purgeOnUse = true;
+            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
+            this.pulse = false;
         }
-        if (targetCard.hasTag(AbstractCard.CardTags.STARTER_STRIKE))
-        {
-            targetCard.baseDamage++;
-        }
+
+    }
+
+    public void atTurnStart() {
+        this.activated = true;
     }
 }

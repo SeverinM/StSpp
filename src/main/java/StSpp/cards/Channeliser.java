@@ -29,7 +29,7 @@ public class Channeliser extends CustomCard
     public static final String ID = DefaultMod.makeID(Channeliser.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Igniter.png");
 
     public Channeliser() {
         super(ID,cardStrings.NAME,IMG,-2,cardStrings.DESCRIPTION,CardType.SKILL,CardColor.BLUE,CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);

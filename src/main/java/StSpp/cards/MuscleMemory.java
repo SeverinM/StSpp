@@ -20,11 +20,11 @@ public class MuscleMemory extends CustomCard
     public static final String ID = DefaultMod.makeID(MuscleMemory.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("MuscleMemory.png");
 
     public MuscleMemory()
     {
-        super(ID, cardStrings.NAME, IMG, 1, cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, AbstractCard.CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, cardStrings.NAME, IMG, 2, cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, AbstractCard.CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
 
@@ -34,7 +34,7 @@ public class MuscleMemory extends CustomCard
         if ( canUpgrade())
         {
             this.upgradeName();
-            this.upgradeBaseCost(0);
+            this.upgradeBaseCost(1);
         }
     }
 

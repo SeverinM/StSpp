@@ -9,8 +9,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.compression.lzma.Base;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.purple.Collect;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -34,7 +36,7 @@ public class MemoryLeakPower extends AbstractPower implements PostPowerApplySubs
     private static final Texture tex32 = TextureLoader.getTexture("StSppResources/images/powers/placeholder_power32.png");
 
     HashSet<AbstractCard> alreadyAppliedCards = new HashSet<>();
-    Hashtable<AbstractPower, Integer> allPowers = new Hashtable<>();
+    Hashtable<String, Integer> allPowers = new Hashtable<>();
 
     public MemoryLeakPower()
     {
@@ -79,11 +81,12 @@ public class MemoryLeakPower extends AbstractPower implements PostPowerApplySubs
     public void updateDescription() {
         description = DESCRIPTIONS[0] + ( this.amount * COST_REDUCTION ) + DESCRIPTIONS[1];
 
-        Enumeration<AbstractPower> keys = allPowers.keys();
+        Enumeration<String> keys = allPowers.keys();
         while(keys.hasMoreElements())
         {
-            AbstractPower ap = keys.nextElement();
-            description += allPowers.get(ap);
+            String strPower = keys.nextElement();
+            AbstractPower ap = AbstractDungeon.player.getPower( strPower);
+            description += allPowers.get(strPower);
             description += " ";
             description += ap.name;
             description += ", ";
@@ -93,12 +96,15 @@ public class MemoryLeakPower extends AbstractPower implements PostPowerApplySubs
     @Override
     public void atStartOfTurn()
     {
-        Enumeration<AbstractPower> keys = allPowers.keys();
-        while ( keys.hasMoreElements())
+        Enumeration<String> keys = allPowers.keys();
+        List<String> powers = Collections.list(keys);
+
+        for (int i = 0; i < powers.size(); i++)
         {
-            AbstractPower ap = keys.nextElement();
-            addToBot(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, ap, allPowers.get(ap)));
+            String strPower = powers.get(i);
+            addToBot(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, strPower, allPowers.get(strPower)));
         }
+
         allPowers.clear();
         updateDescription();
     }
@@ -106,19 +112,27 @@ public class MemoryLeakPower extends AbstractPower implements PostPowerApplySubs
     @Override
     public void receivePostPowerApplySubscriber(AbstractPower abstractPower, AbstractCreature abstractCreature, AbstractCreature abstractCreature1)
     {
-        //Avoid leak power in itself
-        if ( !(abstractPower.ID == MemoryLeakPower.POWER_ID && abstractPower.amount == 1) && abstractCreature == abstractCreature1)
-        {
-            if ( allPowers.contains(abstractPower))
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update()
             {
-                Integer value = allPowers.get(abstractPower);
-                value += abstractPower.amount;
+                //Avoid leak power in itself
+                if ( !(abstractPower.ID == MemoryLeakPower.POWER_ID && abstractPower.amount == 1) && abstractCreature == abstractCreature1)
+                {
+                    if ( allPowers.containsKey(abstractPower.ID))
+                    {
+                        Integer value = allPowers.get(abstractPower.ID);
+                        value += abstractPower.amount;
+                        allPowers.put(abstractPower.ID, value);
+                    }
+                    else
+                    {
+                        allPowers.put(abstractPower.ID, abstractPower.amount);
+                    }
+                }
+                updateDescription();
+                this.isDone = true;
             }
-            else
-            {
-                allPowers.put(abstractPower, abstractPower.amount);
-            }
-        }
-        updateDescription();
+        });
     }
 }

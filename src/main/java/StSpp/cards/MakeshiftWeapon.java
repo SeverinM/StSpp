@@ -21,7 +21,7 @@ public class MakeshiftWeapon extends CustomCard
     public static final String ID = DefaultMod.makeID(MakeshiftWeapon.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("MakeshiftWeapon.png");
 
     public MakeshiftWeapon()
     {
@@ -44,22 +44,14 @@ public class MakeshiftWeapon extends CustomCard
     }
 
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m)
-    {
-        if (!super.canUse(p, m))
-        {
-            return false;
-        }
-
-        return AbstractDungeon.player.relics.size() > 0;
-    }
-
-    @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster)
     {
         this.addToBot(new DamageAllEnemiesAction(abstractPlayer, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
-        int rng = MathUtils.random(0, AbstractDungeon.player.relics.size());
+        if ( AbstractDungeon.player.relics.size() == 0 )
+            return;
+
+        int rng = MathUtils.random(0, AbstractDungeon.player.relics.size() - 1);
         if ( this.upgraded )
         {
             rng = AbstractDungeon.player.relics.size() - 1;

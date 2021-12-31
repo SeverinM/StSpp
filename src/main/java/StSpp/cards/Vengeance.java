@@ -24,52 +24,36 @@ public class Vengeance extends CustomCard
     public static final String ID = DefaultMod.makeID(Vengeance.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Attack.png");
-    public static final int MIN_CURSES= 4;
+    public static final String IMG = makeCardPath("Embrace.png");
 
     public Vengeance()
     {
-        super(ID, cardStrings.NAME, IMG, 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, cardStrings.NAME, IMG, 2, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     @Override
     public void upgrade()
     {
-        if ( this.canUpgrade())
-        {
+        if (this.canUpgrade()) {
             this.upgradeName();
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.upgradeBaseCost(1);
             this.initializeDescription();
         }
     }
 
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m)
-    {
-        if (!super.canUse(p, m))
-        {
-            return false;
-        }
-
-        int count = 0;
-        for(AbstractCard c : AbstractDungeon.player.hand.group)
-        {
-            if ( c.type != CardType.CURSE && c.type != CardType.STATUS && c != this)
-            {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster)
     {
-        AbstractCard bludgeon = new Bludgeon();
-        bludgeon.cost = 0;
-        bludgeon.costForTurn = 0;
-        bludgeon.isCostModified = true;
-        addToBot(new MakeTempCardInHandAction( bludgeon ));
+        int energyGain = 0;
+        for(AbstractCard c : AbstractDungeon.player.hand.group)
+        {
+            if ( c.type == CardType.CURSE || c.type == CardType.STATUS )
+            {
+                energyGain++;
+            }
+        }
+        if ( energyGain > 0)
+            addToBot(new GainEnergyAction(energyGain));
     }
 
     @Override

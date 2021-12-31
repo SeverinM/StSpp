@@ -29,7 +29,7 @@ public class PoisonousPunch extends CustomCard
     public static final String ID = DefaultMod.makeID(PoisonousPunch.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Crossbow.png");
 
     public PoisonousPunch()
     {
@@ -43,7 +43,7 @@ public class PoisonousPunch extends CustomCard
         if ( canUpgrade())
         {
             this.upgradeName();
-            this.upgradeDamage(3);
+            this.upgradeDamage(4);
         }
     }
 

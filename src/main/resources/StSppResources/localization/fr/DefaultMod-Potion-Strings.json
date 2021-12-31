@@ -18,6 +18,11 @@
     "NAME" : "Potion de faiblesse fragmenté",
     "DESCRIPTIONS" : ["Appliquez ", " de Faiblesse."," Utilisable ", " fois"]
   },
+  "StSpp:ScatteredArmorPotion" :
+  {
+    "NAME" : "Potion d'armure fragmenté",
+    "DESCRIPTIONS" : ["Gagnez ", " d'Armure."," Utilisable ", " fois"]
+  },
   "StSpp:InhibitionPotion" :
   {
     "NAME" : "Potion inhibitrice",
